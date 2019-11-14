@@ -1,0 +1,201 @@
+.order {
+    &__heading {
+        @extend .account__subheading;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    &__status {
+        color: #262626;
+        font-size: rem(13px);
+        margin-left: rem(20px);
+        @extend .status;
+
+        &--processing {
+            @extend .status--processing;
+        }
+
+        &--sended {
+            @extend .status--sended;
+        }
+
+        &--canceled {
+            @extend .status--canceled;
+        }
+
+        &--delivered {
+            @extend .status--delivered;
+        }
+
+        &--finished {
+            @extend .status--finished;
+        }
+    }
+
+    &__btn {
+        @extend .btn-main;
+        font-size: rem(13px);
+        padding: rem(10px 20px);
+        margin-left: rem(15px);
+
+        &::before {
+            width: 103%;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin: 5px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: block;
+            margin-bottom: 14px;
+        }
+
+    }
+
+    &__info {
+        padding: rem(30px);
+        background-color: #fff;
+        margin-top: rem(30px);
+
+        .row {
+            margin-bottom: rem(50px);
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: rem(20px);
+            }
+
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__subheading {
+        font-size: rem(20px);
+        line-height: 1;
+        margin-bottom: rem(25px);
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+
+    &__table {
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(20px);
+        }
+
+        th,
+        td {
+            padding: rem(10px 0);
+
+        }
+
+        th {
+            color: #999999;
+            font-size: rem(13px);
+            font-weight: 400;
+            width: 170px;
+        }
+
+        td {
+            color: #262626;
+            font-weight: 600;
+        }
+    }
+
+    &__date {
+        text-align: right;
+
+        span {
+            color: $greyed;
+        }
+    }
+
+    &__link {
+        @extend .link-next;
+        display: block;
+        margin-top: rem(15px);
+    }
+
+    &__shipping {
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(20px);
+        }
+
+    }
+
+    .payment {
+        &__type {
+            color: #262626;
+            font-size: rem(17px);
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: rem(10px);
+            margin-bottom: rem(15px);
+
+            @include media-breakpoint-down(md) {
+                text-align: center;
+            }
+        }
+
+        &__text {
+            color: $greyed;
+            font-size: rem(13px);
+            margin-bottom: 0;
+
+            @include media-breakpoint-down(md) {
+                text-align: center;
+            }
+        }
+
+        &__price {
+            color: #262626;
+            font-size: rem(30px);
+            font-weight: 300;
+            line-height: 1;
+
+            @include media-breakpoint-down(md) {
+                margin-top: 8px;
+                 text-align: center;
+            }
+
+            span {
+                color: $greyed;
+                font-size: rem(20px);
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+        }
+    }
+
+    .shipping {
+        &__type {
+            color: #262626;;
+            font-size: rem(17px);
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: rem(10px);
+            margin-bottom: rem(15px);
+
+            @include media-breakpoint-down(md) {
+                text-align: center;
+            }
+        }
+
+        &__address {
+            color: $greyed;
+            font-size: rem(13px);
+            line-height: 1.25;
+
+            @include media-breakpoint-down(md) {
+                text-align: center;
+            }
+        }
+
+        &__city,
+        &__street {
+            margin-bottom: 0;
+        }
+    }
+}

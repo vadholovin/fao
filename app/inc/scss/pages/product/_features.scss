@@ -1,0 +1,122 @@
+.features {
+  &__list {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    background-color: #fff;
+    border-bottom: 1px solid $border-main;
+    margin: rem(10px 0);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: rem(9px 20px);
+    padding-right: rem(10px);
+    border-radius: 1px;
+    transition: 250ms;
+    font-weight: bold;
+    font-size: rem(13px);
+    color: $text-color;
+
+    svg {
+      margin-left: auto;
+    }
+
+    svg path {
+      transition: 250ms;
+      fill: $highlight;
+    }
+
+
+
+    &:hover {
+      transition: 250ms;
+      background-color: $bg-dark;
+
+      .features__heading {
+        color: #fff;
+        transition: 250ms;
+      }
+
+      svg path {
+        fill: #fff;
+        transition: 250ms;
+      }
+
+      .features__info {
+        font-size: rem(13px);
+
+        .features__heading {
+          font-weight: 700;
+          color: $text-color;
+          font-size: rem(13px);
+          margin-bottom: rem(5px);
+        }
+      }
+
+    }
+
+    @include media-breakpoint-down(md) {
+      color: $text-color;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__heading {
+    display: block;
+    color: $text-color;
+
+    @include media-breakpoint-down(md) {
+      color: $text-light;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    left: calc(100% + 20px);
+    top: -10px;
+    width: 270px;
+    box-shadow: 0 0 20px rgba(20, 24, 26, 0.15);
+    background-color: #fff;
+    padding: rem(20px);
+    z-index: 900;
+    display: none;
+    color: $text-light;
+    font-size: rem(15px);
+
+    .features__heading {
+      font-size: rem(17px);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 17.3px 20px 0;
+      left: -10px;
+      top: 17px;
+      border-color: transparent #fff transparent transparent;
+      position: absolute;
+    }
+
+    @include media-breakpoint-down(md) {
+      left: 0px;
+      top: 100%;
+      width: 100%;
+      box-shadow: none;
+
+      &::before {
+        content: none;
+      }
+    }
+
+  }
+
+
+}

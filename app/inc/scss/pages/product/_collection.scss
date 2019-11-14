@@ -1,0 +1,145 @@
+.collection {
+    &__heading {
+        margin-right: rem(30px);
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        
+        &::after, &::before {
+            content: none;
+        }
+    }
+
+    &__link {
+        @extend .link-next;
+        display: block;
+        font-size: rem(15px);
+        text-align: right;
+        margin-left: auto;
+
+        @include media-breakpoint-down(md) {
+            margin: auto;
+        }
+    }
+
+    &__filters {
+        margin-top: rem(40px);
+
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+
+    &__items {
+        margin-top: rem(40px);
+        
+    }
+
+    &__item {
+        width: 100%;
+           background-size: auto;
+    background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+        border: 1px solid #e6e6e6;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &--big {
+            height: 370px;
+
+            @include media-breakpoint-down(md) {
+                height: 470px;
+                margin-bottom: rem(30px);
+                background-size: cover
+            }
+
+            @include media-breakpoint-down(sm) {
+                height: 370px;
+            }
+        }
+
+        &--small {
+            height: 170px;
+            margin-bottom: rem(30px);
+
+        }
+
+        &--expanded {
+            .collection__price {
+                background-color: #b19f8e;
+                width: 100%;
+                color: #fff;
+                
+                span {
+                    color: #fff;
+                }
+            }
+        }
+
+
+    }
+
+    &__price {
+        color: #0f294d;
+        font-size: rem(15px);
+        line-height: 1;
+        padding: rem(14px 15px);
+        background: rgba(#f2f2f2, 0.95);
+        position: relative;
+        display: inline-block;
+
+        span {
+            color: $greyed;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+    }
+
+    &__drop {
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        background-color: #b19f8e;
+        padding: rem(20px 15px);
+        padding-top: rem(4px);
+        z-index: 200;
+
+        @include gradient-line;
+
+        a {
+            text-align: left;
+            color: #fff;
+
+            &::after {
+                vertical-align: initial;
+                filter: brightness(2);
+            }
+
+            &:hover {
+                color: #fff;
+
+                &::after {
+                    filter: brightness(2);
+                }
+            }
+        }
+    }
+
+    &__title {
+        color: #ffffff;
+        display: block;
+        margin-bottom: rem(20px);
+        font-size: rem(13px);
+    }
+
+}

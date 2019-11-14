@@ -1,0 +1,158 @@
+.search {
+  &__input {
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    height: auto;
+    padding: 0;
+    color: $grey-900;
+    line-height: 1;
+    font-size: 15px;
+
+    &:focus {
+      border-width: 0;
+    }
+
+    &::placeholder {
+      color: $grey-500;
+    }
+
+    @include media-breakpoint-down(md) {
+      color: #fff;
+      margin-right: 15px;
+
+      &:focus {
+        color: #fff;
+      }
+    }
+
+  }
+
+  &__form {
+    
+  }
+
+  &__submit {
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    &:hover {
+      svg path {
+        stroke: #bf9e7c;
+        fill: none;
+      }
+    }
+
+    &--active {
+      svg path {
+        stroke: #bf9e7c;
+        fill: none;
+      }
+    }
+  }
+
+  &__close {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .input-group {
+    padding: rem(18px 16px);
+    padding-left: rem(20px);
+
+    @include media-breakpoint-down(md) {
+      height: 50px;
+
+    }
+  }
+
+  &__results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 20px 20px rgba(20, 24, 26, 0.5);
+    background-color: #fff;
+    padding-bottom: rem(20px);
+    display: none;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    margin-bottom: rem(20px);
+  }
+
+  &__item {
+    // padding: rem(0px 30px);
+    transition: 250ms;
+
+    &:hover {
+      background-color: $bg-dark;
+      transition: 250ms;
+
+
+      .search__link {
+        color: #fff;
+        text-decoration: none;
+        transition: 250ms;
+        border-bottom: 1px solid transparent;
+      }
+
+      .search__price {
+        transition: 250ms;
+        color: #fff;
+
+        span {
+          color: $grey-500;
+          transition: 250ms;
+        }
+      }
+    }
+
+    &--first {
+      
+      .search__link {
+        border-top: 1px solid $border-main;
+      }
+    }
+  }
+
+  &__link {
+    padding: rem(15px 20px);
+    color: $text-color;
+    font-weight: bold;
+    font-size: rem(13px);
+    display: flex;
+    align-items: center;
+    transition: 250ms;
+    border-bottom: 1px solid $border-main;
+
+  }
+
+  &__price {
+    margin-left: auto;
+    color: $highlight;
+    font-size: rem(15px);
+    transition: 250ms;
+
+    span {
+      font-family: $font-secondary;
+      color: $grey-500;
+      transition: 250ms;
+    }
+  }
+
+  &__all {
+    padding-left: rem(20px);
+    @extend .link-next;
+    color: $text-color;
+    font-weight: bold;
+    font-size: rem(15px);
+  }
+
+}

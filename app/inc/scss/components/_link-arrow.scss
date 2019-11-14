@@ -1,0 +1,26 @@
+.link-arrow {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1.15;
+  color: $text-color;
+
+  &::after {
+    content: url(../img/icons/chevron-right.svg);
+    display: inline-block;
+    margin-left: 8px;
+    width: 11px;
+    height: 17px;
+    vertical-align: middle;
+    transition: all 250ms;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+
+    &::after {
+      filter: brightness(0);
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.yourprice {
+  &__heading {
+    color: $text-light;
+    font-size: rem(20px);
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__new {
+    color: $highlight;
+    font-size: rem(50px);
+    line-height: 1;
+
+    span {
+      color: $text-light;
+      font-size: rem(25px);
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  }
+
+  &__old {
+    color: $text-light;
+    font-size: rem(15px);
+    font-weight: 400;
+    margin-left: rem(12px);
+    text-decoration: line-through;
+  }
+}
+
+.shipping {
+  &__heading {
+    color: $text-color;
+    font-weight: 600;
+    font-size: rem(15px);
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    padding: rem(17px 40px);
+    position: relative;
+    line-height: 1;
+    border-top: 1px solid $border-main;
+    border-bottom: 1px solid $border-main;
+
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 20px;
+    }
+
+    &:hover {
+      svg path {
+        fill: $text-color;
+      }
+    }
+  }
+
+  &__link {
+
+    &:hover {
+      text-decoration: none;
+      color: $text-color;
+
+      &::after {
+        filter: brightness(0);
+      }
+    }
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: url(../img/icons/arrow-down.svg);
+      display: block;
+      // vertical-align: text-top;
+      transform: rotate(-90deg);
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+    }
+  }
+
+  &__price {
+    display: block;
+    color: $text-color;
+    font-size: rem(13px);
+  }
+
+  &__eta {
+    color: $text-light;
+    margin-top: rem(8px);
+    display: block;
+    font-size: rem(13px);
+  }
+}
+
+.stock {
+  &__text {
+    color: $text-color;
+    font-size: rem(15px);
+    margin-bottom: rem(20px);
+  }
+
+  &__range {
+    display: flex;
+  }
+
+  &__line {
+    width: 20%;
+    height: 6px;
+    background-color: $border-main;
+    display: inline-block;
+    margin: rem(0 0.5px);
+
+    &--filled {
+      background-color: $highlight;
+    }
+  }
+}

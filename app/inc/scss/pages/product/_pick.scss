@@ -1,0 +1,89 @@
+.pick {
+    &__heading {
+        margin-bottom: rem(40px);
+    }
+
+    &__plus,
+    &__equal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 1.5625rem;
+            height: auto;
+        }
+    }
+
+    &__buy {
+        padding: rem(60px 90px);
+        background-color: #fff;
+        text-align: center;
+        height: 100%;
+        z-index: 100;
+        position: relative;
+        
+        @include media-breakpoint-down(lg) {
+            padding: rem(60px 65px);
+        }
+        
+        @include media-breakpoint-down(md) {
+            max-width: 250px;
+            padding: 20px;
+            margin: auto;
+        }
+    }
+
+    &__size {
+        color: $accent;
+        font-size: rem(30px);
+        font-weight: 300;
+        margin-bottom: rem(40px);
+    }
+
+    &__info {
+        color: #262626;
+        font-size: rem(20px);
+        margin-bottom: rem(35px);
+        line-height: 1.25;
+    }
+
+    &__price {
+        color: #0f294d;
+        font-size: rem(60px);
+        font-weight: 300;
+        line-height: 1;
+        margin-bottom: rem(50px);
+
+        span {
+            color: $greyed;
+            font-size: rem(30px);
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+    }
+
+    &__select {
+        @extend .btn-main;
+        font-size: rem(13px);
+        font-weight: 400;
+        padding: rem(10px 22px);
+        width: 100%;
+        
+        
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
+    }
+    
+    .product {
+        @include media-breakpoint-down(md) {
+            max-width: 250px;
+            margin: auto;
+            margin-bottom: 1.5625rem;
+            display: block;
+            text-align: center;
+        }
+    }
+}

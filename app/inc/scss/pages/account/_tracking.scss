@@ -1,0 +1,201 @@
+.tracking {
+    &__heading {
+        @extend .account__subheading;
+        margin-bottom: 0;
+
+        @include media-breakpoint-down (md) {
+            text-align: center;
+            width: 100%;
+        }
+
+
+    }
+
+    &__number {
+        line-height: 1;
+        font-size: rem(13px);
+        margin-left: auto;
+        color: $greyed;
+
+        @include media-breakpoint-down(md) {
+            margin: auto;
+            margin-top: rem(15px);
+        }
+
+        span {
+            color: $accent;
+            font-weight: 600;
+        }
+    }
+
+    &__wrapper {
+        background: #fff;
+        padding: rem(25px 20px);
+        margin-top: rem(40px);
+    }
+
+
+    &__status {
+        color: #262626;
+        font-size: rem(13px);
+        letter-spacing: -0.13px;
+        margin-right: rem(10px);
+        text-align: left;
+        position: relative;
+
+        span {
+            width: 60%;
+            display: block;
+            height: 40px;
+        }
+
+
+
+        &::after {
+            content: '';
+            width: 100%;
+            display: block;
+            height: 3px;
+            background-color: #5c6267;
+            margin-top: rem(10px);
+        }
+
+        &--finished {
+            &::after {
+                background-color: #0f294d;
+                ;
+            }
+        }
+
+        &--current {
+            color: #262626;
+            font-weight: 600;
+
+            &::before {
+                content: url(../img/icons/accent-dot.svg);
+                display: block;
+                width: 15px;
+                position: absolute;
+                top: 44px;
+                left: 0;
+                right: 0;
+                margin: auto;
+
+                @include media-breakpoint-down(lg) {
+                    top: 26px;
+                }
+
+
+                @include media-breakpoint-down(md) {
+                    top: 24px;
+                }
+            }
+
+            &::after {
+                background-color: #b3a18f;
+                ;
+            }
+        }
+    }
+
+    &__table {
+        font-size: rem(13px);
+
+
+        @include media-breakpoint-down(md) {
+            margin-top: rem(20px);
+        }
+
+        td,
+        th {
+            padding-left: 0;
+            padding-right: 0;
+
+            @include media-breakpoint-down(md) {
+                padding: 20px 5px;
+                min-width: 160px;
+                line-height: 1.25;
+
+            }
+        }
+
+        tr {
+            &:last-of-type {
+
+                th,
+                td {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        thead th {
+            font-weight: 400;
+
+            &:last-of-type {
+                transform: translateX(-15px);
+                text-align: center;
+            }
+        }
+
+        tbody th,
+        td {
+            color: #262626;
+        }
+
+        tbody th {
+            font-weight: 600;
+        }
+
+        tbody td {
+            color: #262626;
+
+
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+                color: $greyed;
+                font-weight: 400;
+            }
+
+            &:nth-of-type(3) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__info {
+        @extend .status__right;
+
+        &--processing {
+            @extend .status__right--processing;
+        }
+
+        &--sended {
+            @extend .status__right--sended;
+        }
+
+        &--canceled {
+            @extend .status__right--canceled;
+        }
+
+        &--delivered {
+            @extend .status__right--delivered;
+        }
+
+        &--finished {
+            @extend .status__right--finished;
+        }
+    }
+
+    &__date {
+        color: #c6cacc;
+    }
+
+    &__link {
+        @extend .link-next;
+
+        &::after {
+            vertical-align: middle;
+        }
+    }
+}

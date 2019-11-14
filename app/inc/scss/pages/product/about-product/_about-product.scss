@@ -1,0 +1,25 @@
+.about-product {
+    &__heading {
+        margin-bottom: rem(40px);
+    }
+
+    &__tabs {
+        border: 1px solid #e6e6e6;
+        position: relative;
+        background: #fff;
+        
+        @include gradient-line;
+    }
+    
+    &__feedback {
+        h3 {
+            color: #262626;
+        font-size: rem(20px);
+        margin-bottom: rem(35px);
+        }
+        
+        .feedback__form {
+            padding: 0;
+        }
+    }
+}

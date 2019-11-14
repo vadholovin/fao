@@ -1,0 +1,111 @@
+.gallery {
+    &__heading {
+        color: #262626;
+        font-size: rem(20px);
+        margin-bottom: rem(20px);
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+
+    &__list {
+        padding: 0;
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+
+
+    &__item {
+        padding: rem(30px 0);
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    &__author {
+        font-size: rem(15px);
+        font-weight: 600;
+        color: #262626;
+        margin-bottom: rem(25px);
+
+        @include media-breakpoint-down(md) {
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: rem(25px);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        margin-top: rem(20px);
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+    }
+
+    &__add {
+        @extend .btn-main;
+        font-size: rem(13px);
+        padding: rem(12.5px 18.5px);
+        line-height: 1;
+
+        &::before {
+            width: 102%;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+
+            &::before {
+                width: 101.5%;
+            }
+        }
+    }
+
+    &__more {
+        @extend .link-next;
+        margin-left: auto;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+            margin: auto;
+        }
+    }
+
+    &__imgs {
+        img {
+            margin: rem(0 15px);
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            opacity: 0.9;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+            
+            @include media-breakpoint-only(lg) {
+                margin: rem(0 5px);
+            }
+
+
+            @include media-breakpoint-down(md) {
+                width: 47.5%;
+                height: 47.5%;
+                margin-bottom: 25px;
+                margin-left: 0;
+            }
+
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+}

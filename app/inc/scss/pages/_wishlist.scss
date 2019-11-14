@@ -1,0 +1,27 @@
+.wishlist__wrapper {
+  margin-bottom: 50px;
+}
+
+.wishlist__header {
+  margin-bottom: rem(30px);
+}
+
+.wishlist-empty {
+  background-color: $grey-400;
+  text-align: center;
+  padding: rem(50px 15px 60px 15px);
+}
+
+.wishlist-empty__heading {
+  margin-bottom: rem(20px);
+  font-weight: bold;
+  font-size: rem(30px);
+}
+
+.wishlist-empty__text {
+  margin-bottom: rem(30px);
+  font-weight: bold;
+  font-size: rem(20px);
+  line-height: 1.4;
+  color: $text-light;
+}

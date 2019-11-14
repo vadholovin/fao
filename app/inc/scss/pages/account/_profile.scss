@@ -1,0 +1,67 @@
+.profile {
+    &__heading {
+        @extend .account__subheading;
+        margin-bottom: rem(30px);
+    }
+
+    &__wrapper {
+        background-color: #fff;
+        margin-bottom: rem(30px);
+        padding: rem(30px);
+        position: relative;
+        z-index: 10;
+    }
+
+    &__subheading {
+        color: #262626;
+        font-size: rem(20px);
+    }
+
+    &__table {
+
+        th,
+        td {
+            padding: rem(10px 0);
+
+        }
+
+        th {
+            width: 270px;
+            color: #999999;
+            font-size: rem(13px);
+            font-weight: 400;
+        }
+
+        td {
+            color: #262626;
+            font-weight: 600;
+
+        }
+
+        tr {
+            &:last-of-type {
+
+                th,
+                td {
+                    border-bottom: none;
+                }
+
+            }
+        }
+    }
+
+    &__btn {
+        @extend .btn-main;
+        font-size: rem(13px);
+        padding: rem(12.5px 20px);
+
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-top: rem(15px);
+
+        }
+    }
+}

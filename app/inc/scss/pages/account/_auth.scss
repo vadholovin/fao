@@ -1,0 +1,86 @@
+.auth {
+
+    &__heading {
+        @extend .account__subheading;
+        margin-bottom: 0;
+    }
+
+    &__link {
+        @extend .link-next;
+        display: block;
+        text-align: right;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+            margin-top: rem(15px);
+            display: block;
+        }
+
+    }
+
+    &__form {
+        border-radius: 1px;
+        padding: rem(30px);
+        background-color: #fff;
+        margin-top: rem(35px);
+        position: relative;
+        z-index: 10;
+    }
+
+    &__label {
+        @extend .form-label;
+        font-weight: 600;
+        font-size: rem(13px);
+       
+    }
+
+    &__input,
+    &__textarea,
+    &__select {
+        @extend .form-input;
+    }
+
+    &__textarea {
+        height: 130px !important;
+    }
+
+    &__buttons {
+        margin-top: rem(50px);
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+    }
+
+    &__submit {
+        @extend .btn-main;
+        font-size: rem(13px);
+        padding-bottom: rem(12.5px);
+        padding-top: rem(12.5px);
+        ;
+
+        &::before {
+            width: 102%;
+        }
+
+        @include media-breakpoint-down(md) {
+            display: block;
+            width: 100%;
+            margin-bottom: rem(15px);
+        }
+    }
+
+    &__required {
+        color: $accent;
+        font-size: rem(13px);
+    }
+
+    &__info {
+        margin-left: auto;
+        color: #919699;
+        font-size: rem(13px);
+    }
+}

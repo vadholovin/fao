@@ -1,0 +1,243 @@
+.comments {
+    &__heading {
+        color: #262626;
+        font-size: rem(20px);
+        margin-bottom: rem(20px);
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+
+    &__list {
+        padding: 0;
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+
+
+    &__comment {
+        padding: rem(20px 0);
+        border-bottom: 1px solid #e6e6e6;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        margin-top: rem(20px);
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+    }
+
+    &__add {
+        @extend .btn-main;
+        font-size: rem(13px);
+        padding: rem(12.5px 18.5px);
+        line-height: 1;
+
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            text-align: center;
+
+
+        }
+    }
+
+    &__more {
+        @extend .link-next;
+        margin-left: auto;
+
+        @include media-breakpoint-down(md) {
+            margin: auto;
+            margin-top: 15px;
+        }
+    }
+}
+
+.comment {
+
+    &__header {
+        margin-bottom: rem(40px);
+        align-items: center;
+
+
+        @include media-breakpoint-down(md) {
+
+            margin-bottom: 0;
+        }
+    }
+
+    &__author {
+        font-size: rem(15px);
+        font-weight: 600;
+
+        span {
+            color: $greyed;
+            display: block;
+            font-size: rem(13px);
+            font-weight: 400;
+
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(40px);
+
+            span {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+
+        }
+    }
+
+    &__rating {
+        span {
+            color: $greyed;
+            display: block;
+            font-size: rem(13px);
+        }
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        margin-top: rem(6px);
+
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__star {
+        width: 19px;
+        height: 19px;
+        margin-right: 1px;
+    }
+
+    &__id {
+        color: $greyed;
+        font-size: rem(13px);
+        padding-right: 10px;
+
+        span {
+            color: #262626;
+            font-weight: 600;
+            margin-top: rem(4px);
+            display: block;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__date {
+        color: $greyed;
+        font-size: rem(13px);
+        padding-right: 10px;
+
+        time {
+            color: #262626;
+            font-weight: 600;
+            margin-top: rem(4px);
+            display: block;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+    }
+
+    &__used {
+        color: $greyed;
+        font-size: rem(13px);
+
+        span {
+            color: #262626;
+            font-weight: 600;
+            margin-top: rem(4px);
+            display: block;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__heading {
+        font-size: rem(13px);
+        color: $greyed;
+    }
+
+    &__content {
+        color: #262626;
+        font-size: rem(13px);
+    }
+
+    &__footer {
+        margin-top: rem(6px);
+    }
+
+    &__like-dislike {
+        display: flex;
+        margin-left: auto;
+        justify-content: flex-end;
+        align-items: center;
+        line-height: 1;
+        color: $greyed;
+        font-size: rem(13px);
+
+
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+            margin: auto;
+        }
+    }
+
+    &__like,
+    &__dislike {
+        margin-left: rem(12px);
+        display: flex;
+        align-items: center;
+        background: transparent;
+        padding: 0;
+        border: none;
+        color: $accent;
+
+        svg {
+            margin-right: rem(8px);
+        }
+    }
+    
+    &__dislike {
+        svg {
+            transform: translateY(3px);
+        }    
+    }
+
+}
+
+.date {
+    &__wrapper {
+        margin-left: rem(24px);
+
+
+        @include media-breakpoint-down(md) {
+            margin: 0;
+        }
+    }
+}

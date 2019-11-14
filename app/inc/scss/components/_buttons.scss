@@ -1,0 +1,136 @@
+.btn-main {
+  border-radius: 0px;
+  background-color: $bg-dark;
+  background-image: $gradient-dark;
+  font-size: rem(13px);
+  font-weight: bold;
+  text-align: center;
+  padding: rem(12px 24px);
+  border: none;
+  color: #fff;
+  line-height: 1.15;
+  position: relative;
+  transition: 150ms;
+  text-decoration: none;
+
+  svg path {
+    transition: 150ms;
+    fill: #fff;
+  }
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    background-image: none;
+    transition: 150ms;
+
+    svg path {
+      fill: $highlight;
+      transition: 150ms;
+    }
+  }
+}
+
+.btn-square {
+  border-radius: 1px;
+  background-color: $bg-dark;
+  background-image: $gradient-dark;
+  padding: rem( 16px 22px);
+  border: none;
+  width: 110px;
+  height: 110px;
+  color: #fff;
+  font-weight: bold;
+  font-size: rem(13px);
+  line-height: 1.15;
+  transition: 150ms;
+
+  svg {
+    margin-bottom: rem(10px);
+  }
+
+  svg path {
+    transition: 150ms;
+    fill: #fff;
+  }
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    background-image: none;
+    transition: 150ms;
+
+    svg path {
+      fill: $highlight;
+    }
+  }
+}
+
+.link-next {
+  color: $text-color;
+  font-size: rem(13px);
+
+  &:hover {
+    color: $text-color;
+
+    // &::after {
+    //   filter: brightness(0);
+    // }
+  }
+
+  &::before {
+    content: none;
+  }
+
+  &::after {
+    content: url(../img/icons/chevron-down.svg);
+    display: inline-block;
+    margin-left: rem(5px);
+    // vertical-align: text-top;
+    transform: rotate(-90deg);
+  }
+
+}
+
+.link-prev {
+  color: $text-color;
+  font-size: rem(13px);
+
+  &:hover {
+    color: $text-color;
+
+    &::before {
+      filter: brightness(0);
+    }
+  }
+
+  &::after {
+    content: none;
+  }
+
+  &::before {
+    content: url(../img/icons/arrow-down.svg);
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-right: rem(5px);
+    vertical-align: text-top;
+  }
+
+}
+
+.btn-light {
+  background: #e6e6e6;
+  color: $text-color;
+  font-size: rem(15px);
+  font-weight: 600;
+  padding: rem(12.5px);
+  text-align: center;
+  border: none;
+
+  &:hover {
+    color: #fff;
+    background-color: #b3a18f;
+    transition: 150ms;
+
+  }
+}

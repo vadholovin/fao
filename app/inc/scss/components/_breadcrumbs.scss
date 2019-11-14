@@ -1,0 +1,40 @@
+.breadcrumbs {
+  &__list {
+    @extend .breadcrumb;
+    background: transparent;
+    margin-top: rem(25px);
+    margin-bottom: rem(30px);
+    padding: 0;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+      margin-bottom: rem(15px);
+    }
+  }
+
+  &__item {
+    @extend .breadcrumb-item;
+    font-size: rem(13px);
+    line-height: 1.2;
+    color: $text-light;
+  }
+
+  &__link {
+    color: $text-color;
+
+    &:hover {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+}
+
+.breadcrumbs__item+.breadcrumbs__item {
+  padding-left: rem(14px);
+
+  &::before {
+    vertical-align: middle;
+    padding-right: rem(14px);
+    content: url(../img/icons/chevron-right.svg);
+  }
+}

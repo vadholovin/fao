@@ -1,0 +1,95 @@
+.return {
+    &__heading {
+        @extend .account__subheading;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    &__subheading {
+        margin-bottom: rem(20px);
+        padding-bottom: rem(15px);
+        border-bottom: 1px solid #b3a18f;
+        font-size: rem(20px);
+        margin-top: rem(20px);
+    }
+
+    &__form {
+        border-radius: 1px;
+        padding: rem(30px);
+        background-color: #fff;
+        z-index: 10;
+        position: relative;
+        margin-top: rem(35px);
+    }
+
+    &__label {
+        @extend .form-label;
+        font-size: rem(13px);
+        font-weight: 600;
+    }
+
+    &__input,
+    &__textarea,
+    &__select {
+        @extend .form-input;
+    }
+
+    &__textarea {
+        height: 130px !important;
+    }
+
+    &__submit {
+        @extend .btn-main;
+        font-size: rem(13px);
+        padding-bottom: rem(12.5px);
+        padding-top: rem(12.5px);
+        margin-top: rem(15px);
+        margin-bottom: rem(10px);
+
+        &::before {
+            width: 101%;
+        }
+    }
+
+    &__info {
+        color: $greyed;
+        font-size: rem(13px);
+        display: block;
+
+        &--small {
+            font-size: rem(13px);
+            margin-top: rem(15px);
+        }
+        
+        &--important {
+            font-weight: 600;
+            color: #262626;
+        }
+    }
+
+    &__radio {
+        margin-top: rem(30px);
+
+
+    }
+
+    &__control {
+        margin-bottom: rem(15px);
+
+        label {
+            color: #262626;
+            font-size: rem(15px);
+            font-weight: 600;
+            padding-left: rem(20px);
+            
+            &:hover {
+                font-weight: 600 !important;
+            }
+        }
+        
+        span {
+            margin-top: rem(10px);
+            font-weight: 400;
+        }
+    }
+}
