@@ -145,18 +145,19 @@ $('.product-page__slider--full').slick({
   slidesToScroll: 1,
   arrows: false,
   fade: true,
-  asNavFor: '.product__slider--thumbnail',
+  asNavFor: '.product-page__slider--thumbnail',
 
 });
 $('.product-page__slider--thumbnail').slick({
   slidesToShow: 6,
   slidesToScroll: 1,
-  asNavFor: '.product__slider--full',
+  asNavFor: '.product-page__slider--full',
   dots: false,
   arrows: false,
   centerMode: false,
   focusOnSelect: true,
-  responsive: [{
+  responsive: [
+    {
       breakpoint: 1200,
       settings: {
         slidesToShow: 5,

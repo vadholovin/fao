@@ -1,12 +1,13 @@
 .btn-main {
   border-radius: 0px;
-  background-color: $bg-dark;
+  background-color: white;
   background-image: $gradient-dark;
   font-size: rem(13px);
   font-weight: bold;
   text-align: center;
   padding: rem(12px 24px);
-  border: none;
+  border: 1px solid;
+  border-image: $border-gradient 10;
   color: #fff;
   line-height: 1.15;
   position: relative;
@@ -19,7 +20,7 @@
   }
 
   &:hover {
-    color: #fff;
+    color: $text-color;
     text-decoration: none;
     background-image: none;
     transition: 150ms;

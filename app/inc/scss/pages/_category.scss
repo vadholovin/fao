@@ -324,7 +324,7 @@
   }
 
   &__text {
-    color: #262626;
+    color: $text-color;
     font-size: rem(13px);
   }
 
@@ -447,7 +447,7 @@
   }
 
   &__cat {
-    color: #262626;
+    color: $text-color;
     font-family: "Segoe UI";
     font-size: rem(13px);
     line-height: 1;
@@ -501,7 +501,7 @@
 
 .subcategory {
   &__title {
-    color: #262626;
+    color: $text-color;
     font-size: rem(13px);
     line-height: 1;
     text-align: left;
@@ -568,7 +568,8 @@
 
 
   &__heading {
-    color: #262626;
+    color: $text-color;
+    font-weight: bold;
     font-size: rem(20px);
     display: block;
     margin-bottom: rem(10px);
@@ -585,7 +586,7 @@
 .recommendations {
 
   &__heading {
-    color: #262626;
+    color: $text-color;
     font-size: rem(30px);
     margin-bottom: 0;
     line-height: 1;
@@ -788,7 +789,7 @@
   }
 
   &__heading {
-    color: #262626;
+    color: $text-color;
     font-size: rem(20px);
     text-align: left;
     margin-bottom: rem(25px);
@@ -809,7 +810,7 @@
   }
 
   &__text {
-    color: #262626;
+    color: $text-color;
     font-size: rem(13px);
   }
 

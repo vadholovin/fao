@@ -10038,14 +10038,15 @@ h1 {
   font-size: 2.5rem;
 }
 
-h2 {
+h2,
+.title {
   font-weight: bold;
   font-size: 1.875rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-.frontpage h2 {
+.title--bigger {
   font-size: 2.5rem;
 }
 
@@ -10132,14 +10133,19 @@ input:focus,
 
 .btn-main, .product--table .product__buy, .filters__clear, .filters__btn, .support__btn, .feedback__submit, .cart__checkout, .promocode__submit, .task__perform, .task__submit, .product-page__buy, .product-page__oneclick, .crossale__buy, .comments__add, .reviews__add, .gallery__add, .pick__select, .compare__addtocart, .compare__remove, .opinion__submit, .dreambox__addtocart, .dreambox__similar, .profile__btn, .order__btn, .auth__submit, .return__submit, .category__btn--filters, .sold__btn {
   border-radius: 0px;
-  background-color: #33302e;
+  background-color: white;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#a68563), to(#cca885));
-  background-image: linear-gradient(to top, #a68563 0%, #cca885 100%);
+  background-image: linear-gradient(to top, #a68563, #cca885);
   font-size: 0.8125rem;
   font-weight: bold;
   text-align: center;
   padding: 0.75rem 1.5rem;
-  border: none;
+  border: 1px solid;
+  -webkit-border-image: -webkit-gradient(linear, left bottom, left top, from(#a68563), to(#cca885)) 10;
+  -webkit-border-image: linear-gradient(to top, #a68563, #cca885) 10;
+       -o-border-image: linear-gradient(to top, #a68563, #cca885) 10;
+          border-image: -webkit-gradient(linear, left bottom, left top, from(#a68563), to(#cca885)) 10;
+          border-image: linear-gradient(to top, #a68563, #cca885) 10;
   color: #fff;
   line-height: 1.15;
   position: relative;
@@ -10155,7 +10161,7 @@ input:focus,
 }
 
 .btn-main:hover, .product--table .product__buy:hover, .filters__clear:hover, .filters__btn:hover, .support__btn:hover, .feedback__submit:hover, .cart__checkout:hover, .promocode__submit:hover, .task__perform:hover, .task__submit:hover, .product-page__buy:hover, .product-page__oneclick:hover, .crossale__buy:hover, .comments__add:hover, .reviews__add:hover, .gallery__add:hover, .pick__select:hover, .compare__addtocart:hover, .compare__remove:hover, .opinion__submit:hover, .dreambox__addtocart:hover, .dreambox__similar:hover, .profile__btn:hover, .order__btn:hover, .auth__submit:hover, .return__submit:hover, .category__btn--filters:hover, .sold__btn:hover {
-  color: #fff;
+  color: #33302e;
   text-decoration: none;
   background-image: none;
   -webkit-transition: 150ms;
@@ -10172,7 +10178,7 @@ input:focus,
   border-radius: 1px;
   background-color: #33302e;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#a68563), to(#cca885));
-  background-image: linear-gradient(to top, #a68563 0%, #cca885 100%);
+  background-image: linear-gradient(to top, #a68563, #cca885);
   padding: 1rem 1.375rem;
   border: none;
   width: 110px;
@@ -16295,7 +16301,7 @@ select {
 }
 
 .product-page__slider--thumbnail {
-  margin-top: 1.875rem;
+  margin-top: 1.25rem;
 }
 
 .product-page__slider--thumbnail .slick-track {
@@ -16304,54 +16310,12 @@ select {
 
 .product-page__slider--thumbnail .slick-slide {
   position: relative;
-  margin: 0 15px;
-}
-
-.product-page__slider--thumbnail .slick-slide::after {
-  content: '';
-  width: 100%;
-  height: 3px;
-  background-color: #b3a18f;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-}
-
-.product-page__slider--thumbnail .slick-slide::after {
-  width: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  bottom: -3px;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-}
-
-.product-page__slider--thumbnail .slick-slide:hover::after {
-  width: 100%;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  margin: 0 5px;
 }
 
 .product-page__slider--thumbnail .slick-list {
-  margin: 0 -15px;
-  height: 73px;
-}
-
-.product-page__slider--thumbnail .slick-current::after {
-  content: '';
-  width: 100%;
-  height: 3px;
-  background-color: #b3a18f;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-}
-
-.product-page__slider--thumbnail .slick-current::after {
-  bottom: -3px;
+  margin: 0 -5px;
+  height: 100px;
 }
 
 .product-page__img--big {
@@ -16368,10 +16332,21 @@ select {
 }
 
 .product-page__img--thumbnail {
-  width: 70px;
-  height: 70px;
+  border: 10px solid transparent;
+  width: 90px;
+  height: 90px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: border-color 250ms, box-shadow 250ms;
+  transition: border-color 250ms, box-shadow 250ms;
+}
+
+.product-page__img--thumbnail:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.slick-current .product-page__img--thumbnail {
+  border-color: white;
 }
 
 .product-page__summary {
@@ -16396,7 +16371,7 @@ select {
 
 .product-page__sku span {
   color: #bf9e7c;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .product-page__yourprice {
@@ -16420,6 +16395,7 @@ select {
 
 .product-page__disc {
   color: #33302e;
+  font-weight: bold;
   font-size: 0.8125rem;
   display: -webkit-box;
   display: flex;
@@ -16436,18 +16412,22 @@ select {
   }
 }
 
+.product-page__disc:hover {
+  color: #33302e;
+}
+
 .product-page__disc svg {
   margin-right: 10px;
 }
 
 .product-page__buy {
   font-size: 1.0625rem;
-  padding: 0.9375rem 1.25rem;
+  padding: 0.9375rem 0.9375rem 0.9375rem 1.25rem;
 }
 
 .product-page__oneclick {
   font-size: 0.8125rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.9375rem 0.75rem 1.25rem;
 }
 
 .product-page__favourite {
@@ -16473,6 +16453,8 @@ select {
 }
 
 .product-page__favourite a svg {
+  display: inline-block;
+  vertical-align: text-bottom;
   margin-left: 0.25rem;
 }
 
@@ -16491,6 +16473,7 @@ select {
 
 .product-page__compare, .product-page__wishlist {
   color: #33302e;
+  font-weight: bold;
   font-size: 0.8125rem;
   margin-right: 20px !important;
 }
@@ -16547,8 +16530,9 @@ select {
 }
 
 .yourprice__heading {
-  color: #999691;
+  color: #33302e;
   font-size: 1.25rem;
+  font-weight: bold;
   margin-bottom: 15px;
 }
 
@@ -16561,12 +16545,14 @@ select {
 .yourprice__new {
   color: #bf9e7c;
   font-size: 3.125rem;
+  font-weight: bold;
   line-height: 1;
 }
 
 .yourprice__new span {
   color: #999691;
-  font-size: 1.5625rem;
+  font-size: 2.5rem;
+  font-weight: normal;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -16579,8 +16565,8 @@ select {
 }
 
 .shipping__heading {
-  color: #33302e;
-  font-weight: 600;
+  color: #999691;
+  font-weight: bold;
   font-size: 0.9375rem;
 }
 
@@ -16623,10 +16609,8 @@ select {
 }
 
 .shipping__link::after {
-  content: url(../img/icons/arrow-down.svg);
+  content: url(../img/icons/chevron-right.svg);
   display: block;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
   position: absolute;
   right: 0;
   bottom: 20px;
@@ -16635,7 +16619,8 @@ select {
 .shipping__price {
   display: block;
   color: #33302e;
-  font-size: 0.8125rem;
+  font-weight: bold;
+  font-size: 0.9375rem;
 }
 
 .shipping__eta {
@@ -16676,14 +16661,13 @@ select {
 
 .features__item {
   background-color: #fff;
-  border-bottom: 1px solid #e6e3e1;
   margin: 0.625rem 0;
   position: relative;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  padding: 0.5625rem 1.25rem;
+  padding: 0.625rem 1.25rem;
   padding-right: 0.625rem;
   border-radius: 1px;
   -webkit-transition: 250ms;
@@ -20450,7 +20434,7 @@ select {
 }
 
 .category__text {
-  color: #262626;
+  color: #33302e;
   font-size: 0.8125rem;
 }
 
@@ -20599,7 +20583,7 @@ select {
 }
 
 .discounts__cat {
-  color: #262626;
+  color: #33302e;
   font-family: "Segoe UI";
   font-size: 0.8125rem;
   line-height: 1;
@@ -20655,7 +20639,7 @@ select {
 }
 
 .subcategory__title {
-  color: #262626;
+  color: #33302e;
   font-size: 0.8125rem;
   line-height: 1;
   text-align: left;
@@ -20730,7 +20714,8 @@ select {
 }
 
 .discount__heading {
-  color: #262626;
+  color: #33302e;
+  font-weight: bold;
   font-size: 1.25rem;
   display: block;
   margin-bottom: 0.625rem;
@@ -20743,7 +20728,7 @@ select {
 }
 
 .recommendations__heading {
-  color: #262626;
+  color: #33302e;
   font-size: 1.875rem;
   margin-bottom: 0;
   line-height: 1;
@@ -20967,7 +20952,7 @@ select {
 }
 
 .brand__heading {
-  color: #262626;
+  color: #33302e;
   font-size: 1.25rem;
   text-align: left;
   margin-bottom: 1.5625rem;
@@ -20989,7 +20974,7 @@ select {
 }
 
 .brand__text {
-  color: #262626;
+  color: #33302e;
   font-size: 0.8125rem;
 }
 

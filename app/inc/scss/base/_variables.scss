@@ -15,8 +15,8 @@ $brown-light: #d9b898;
 $brown-dark: #bf9e7c;
 $red: #b33c00;
 $green: #6a8000;
-$gradient-dark: linear-gradient(to top, #a68563 0%, #cca885 100%);
-$gradient-light: linear-gradient(to top, #bf9e7c 0%, #d9bea3 100%);
+$gradient-dark: linear-gradient(to top, #a68563, #cca885);
+$gradient-light: linear-gradient(to top, #bf9e7c, #d9bea3);
 
 $bg-main: $grey-100 !default;
 $bg-light: $grey-400 !default;

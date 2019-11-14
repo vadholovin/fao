@@ -25,15 +25,16 @@ h1 {
   font-size: rem(40px);
 }
 
-h2 {
+h2,
+.title {
   font-weight: bold;
   font-size: rem(30px);
   text-align: center;
   text-transform: uppercase;
+}
 
-  .frontpage & {
-    font-size: rem(40px);
-  }
+.title--bigger {
+  font-size: rem(40px);
 }
 
 .overlay {

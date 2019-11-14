@@ -115,7 +115,7 @@
 
   &__slider {
     &--thumbnail {
-      margin-top: rem(30px);
+      margin-top: rem(20px);
 
       .slick-track {
         margin-left: 0;
@@ -123,39 +123,12 @@
 
       .slick-slide {
         position: relative;
-        margin: 0 15px;
-        @include gradient-line;
-
-        &::after {
-          width: 0;
-          right: 0;
-          left: 0;
-          margin: auto;
-          bottom: -3px;
-          transition: 200ms;
-        }
-
-        &:hover {
-          &::after {
-            width: 100%;
-            transition: 200ms;
-          }
-        }
+        margin: 0 5px;
       }
 
       .slick-list {
-        margin: 0 -15px;
-        height: 73px;
-      }
-
-      .slick-current {
-
-        @include gradient-line;
-
-        &::after {
-          bottom: -3px;
-        }
-
+        margin: 0 -5px;
+        height: 100px;
       }
     }
   }
@@ -172,9 +145,19 @@
     }
 
     &--thumbnail {
-      width: 70px;
-      height: 70px;
+      border: 10px solid transparent;
+      width: 90px;
+      height: 90px;
       object-fit: cover;
+      transition: border-color 250ms, box-shadow 250ms;
+
+      &:hover {
+        box-shadow: $shadow;
+      }
+
+      .slick-current & {
+        border-color: white;
+      }
     }
   }
 
@@ -197,7 +180,7 @@
 
     span {
       color: $highlight;
-      font-weight: 600;
+      font-weight: bold;
     }
   }
 
@@ -224,6 +207,7 @@
 
   &__disc {
     color: $text-color;
+    font-weight: bold;
     font-size: rem(13px);
     display: flex;
     align-items: center;
@@ -234,6 +218,10 @@
       justify-content: center;
     }
 
+    &:hover {
+      color: $text-color;
+    }
+
     svg {
       margin-right: 10px;
     }
@@ -241,13 +229,12 @@
 
   &__buy {
     font-size: rem(17px);
-    padding: rem(15px 20px);
-
+    padding: rem(15px 15px 15px 20px);
   }
 
   &__oneclick {
     font-size: rem(13px);
-    padding: rem(12px 20px);
+    padding: rem(12px 15px 12px 20px);
   }
 
   &__favourite {
@@ -269,6 +256,8 @@
       }
 
       svg {
+        display: inline-block;
+        vertical-align: text-bottom;
         margin-left: rem(4px);
       }
 
@@ -290,6 +279,7 @@
   &__compare,
   &__wishlist {
     color: $text-color;
+    font-weight: bold;
     font-size: rem(13px);
     margin-right: 20px !important;
 

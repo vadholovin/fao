@@ -1,7 +1,8 @@
 .yourprice {
   &__heading {
-    color: $text-light;
+    color: $text-color;
     font-size: rem(20px);
+    font-weight: bold;
     margin-bottom: 15px;
 
     @include media-breakpoint-down(md) {
@@ -12,11 +13,13 @@
   &__new {
     color: $highlight;
     font-size: rem(50px);
+    font-weight: bold;
     line-height: 1;
 
     span {
       color: $text-light;
-      font-size: rem(25px);
+      font-size: rem(40px);
+      font-weight: normal;
       font-family: 'Source Sans Pro', sans-serif;
     }
   }
@@ -32,8 +35,8 @@
 
 .shipping {
   &__heading {
-    color: $text-color;
-    font-weight: 600;
+    color: $text-light;
+    font-weight: bold;
     font-size: rem(15px);
   }
 
@@ -80,10 +83,8 @@
     }
 
     &::after {
-      content: url(../img/icons/arrow-down.svg);
+      content: url(../img/icons/chevron-right.svg);
       display: block;
-      // vertical-align: text-top;
-      transform: rotate(-90deg);
       position: absolute;
       right: 0;
       bottom: 20px;
@@ -93,7 +94,8 @@
   &__price {
     display: block;
     color: $text-color;
-    font-size: rem(13px);
+    font-weight: bold;
+    font-size: rem(15px);
   }
 
   &__eta {
