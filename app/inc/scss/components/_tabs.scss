@@ -1,81 +1,86 @@
 .tabs {
-    &__menu {
-        display: flex;
-        padding: 0;
-        list-style: none;
-        border-bottom: 1px solid #e6e6e6;
-        margin-bottom: 0;
-        flex-wrap: wrap;
-        
-        @include media-breakpoint-down(md) {
-                text-align: center;
-        }
+  &__menu {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid $border-main;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    flex: 1 1 20%;
+    border-right: 1px solid $border-main;
+
+    &:last-of-type {
+      border: none;
     }
 
-    &__item {
-        flex: 1 1 20%;
-        border-right: 1px solid #e6e6e6;
+    @include media-breakpoint-down(md) {
+      border-top: 1px solid $border-main;
 
-        &:last-of-type {
-            border: none;
-        }
+      &:last-of-type {
+        border-top: 1px solid $border-main;
+      }
+    }
+  }
 
-        @include media-breakpoint-down(md) {
-            border-top: 1px solid #e6e6e6;
-            
-             &:last-of-type {
-            border-top: 1px solid #e6e6e6;
-        }
-        }
+  &__link {
+    color: $text-color;
+    font-weight: bold;
+    font-size: rem(20px);
+    line-height: 1.15;
+    padding: rem(20px 30px);
+    display: block;
+    transition: 150ms;
+
+    &--active {
+      background-color: $bg-dark;
+      transition: 150ms;
+      color: #ffffff;
     }
 
-    &__link {
-        color: #262626;
-        font-size: rem(15px);
-        font-weight: 700;
-        padding: rem(20px 30px);
-        display: block;
-        transition: 150ms;
 
-        &--active {
-            background-color: #b3a18f;
-            transition: 150ms;
-            color: #ffffff;
-        }
-
-
-        &:hover {
-            text-decoration: none;
-            background-color: #b3a18f;
-            transition: 150ms;
-            color: #ffffff;
-        }
-        
-        @include media-breakpoint-down(md) {
-            font-size: 14px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-        
-                @include media-breakpoint-down(sm) {
-            font-size: 16px;
-        }
-
-
-
+    &:hover {
+      text-decoration: none;
+      background-color: $bg-dark;
+      transition: 150ms;
+      color: #ffffff;
     }
 
-    &__content {
-        padding: rem(40px 30px);
+    @include media-breakpoint-down(lg) {
+      font-size: rem(16px);
     }
 
-    &__pane {
-        display: none;
-
-        &--active {
-            display: block;
-        }
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+
+
+
+  }
+
+  &__content {
+    padding: rem(40px 30px);
+  }
+
+  &__pane {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
 }

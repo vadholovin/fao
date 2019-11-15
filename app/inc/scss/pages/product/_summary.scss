@@ -47,11 +47,14 @@
   }
 
   &__item {
-    padding: rem(17px 40px);
+    padding: rem(17px 24px 17px 40px);
     position: relative;
     line-height: 1;
     border-top: 1px solid $border-main;
-    border-bottom: 1px solid $border-main;
+    
+    &:last-child {
+      border-bottom: 1px solid $border-main;
+    }
 
 
     svg {
@@ -87,7 +90,7 @@
       display: block;
       position: absolute;
       right: 0;
-      bottom: 20px;
+      bottom: 16px;
     }
   }
 
@@ -108,9 +111,14 @@
 
 .stock {
   &__text {
-    color: $text-color;
+    color: $text-light;
+    font-weight: bold;
     font-size: rem(15px);
     margin-bottom: rem(20px);
+
+    span {
+      color: $text-color;
+    }
   }
 
   &__range {
@@ -125,7 +133,7 @@
     margin: rem(0 0.5px);
 
     &--filled {
-      background-color: $highlight;
+      background-color: $green;
     }
   }
 }
