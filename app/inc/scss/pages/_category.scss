@@ -1,40 +1,52 @@
 .category {
   &__discounts {
+    width: 100%;
     margin-bottom: rem(40px);
 
     .slick-list {
-      margin: 0 15px;
+      margin: 0;
     }
 
-    .slick-dots {
-      @extend .slider-dots;
-      bottom: 10px;
-      right: 25px;
+    // .slick-dots {
+    //   @extend .slider-dots;
+    //   bottom: 10px;
+    //   right: 25px;
 
-      button {
-        @extend .slider-dot;
-      }
+    //   button {
+    //     @extend .slider-dot;
+    //   }
 
+
+    //   @include media-breakpoint-down(md) {
+    //     left: 0;
+    //     right: 0;
+    //   }
+
+    // }
+
+
+    // .slick-active {
+
+    //   button {
+    //     @extend .slider-dot--active;
+    //   }
+    // }
+  }
+
+  &__header {
+
+    .link-arrow {
+      text-align: right;
 
       @include media-breakpoint-down(md) {
-        left: 0;
-        right: 0;
-      }
-
-    }
-
-
-    .slick-active {
-
-      button {
-        @extend .slider-dot--active;
+        display: none
       }
     }
   }
 
   &__heading {
     margin: 0;
-    line-height: 1;
+    line-height: 1.15;
   }
 
   &__discount {
@@ -57,7 +69,7 @@
 
 
   &__counter {
-    color: $greyed;
+    color: $text-light;
     font-size: 13px;
     margin-left: rem(30px);
     margin-top: 9px;
@@ -69,8 +81,8 @@
 
 
   &__count {
-    color: #998a7a;
-    font-weight: 600;
+    color: $highlight;
+    font-weight: bold;
   }
 
   &__link {
@@ -106,7 +118,8 @@
 
   &__subcategory {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
     height: 170px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -119,7 +132,7 @@
 
       .subcategory__title {
 
-        background: #b3a18f;
+        background: $bg-dark;
         transition: 150ms;
         color: #fff;
 
@@ -239,17 +252,23 @@
       padding: 10px 0;
       padding-right: 0.625rem;
       margin: 0 1.25rem;
+      font-weight: normal;color: $text-color;
+      
 
       &:last-of-type {
         border-bottom: 0;
       }
 
       &:hover {
-        font-weight: 600;
         background: #fff;
+        font-weight: bold;
+
+        .features__heading {
+          color: $text-color;
+        }
 
         svg path {
-          fill: #0f294d
+          fill: $text-color;
         }
       }
     }
@@ -312,7 +331,7 @@
 
   &__caption {
     margin-top: rem(40px);
-    color: $greyed;
+    color: $text-light;
     font-size: rem(15px);
     font-style: italic;
   }
@@ -330,7 +349,7 @@
 
   &__related {
     margin-top: rem(50px);
-    margin-bottom: rem(60px);
+    // margin-bottom: rem(60px);
   }
 
 
@@ -338,178 +357,121 @@
 
 .discounts {
   &__item {
-    background: #ffffff;
-    padding: rem(45px 40px);
-    display: flex !important;
-    align-items: center;
     width: 100%;
+  }
+
+  &__content {
+    padding: rem(20px 90px);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
     position: relative;
-
-
-    @include media-breakpoint-only(lg) {
-      align-items: center;
-    }
 
     @include media-breakpoint-down(md) {
       flex-direction: column;
       text-align: center;
       align-items: center;
-      padding: rem(30px);
+      padding-left: rem(30px);
+      padding-right: rem(30px);
     }
-  }
 
-  &__headings {
-    flex: 0 0 27%;
+    @include media-breakpoint-up(xl) {
+      padding-left: rem(100px);
+      padding-right: rem(100px);
+    }
+
+    &::before {
+      content: url(../img/general/pattern-2.png);
+      position: absolute;
+      top: 50%;
+      left: 28px;
+      transform: translate(0, -50%);
+
+      @include media-breakpoint-up(xl) {
+        left: 38px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        content: none;
+      }
+    }
+
+    &::after {
+      content: url(../img/general/pattern-3.png);
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 28px;
+
+      @include media-breakpoint-up(xl) {
+        right: 38px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        content: none;
+      }
+    }
   }
 
   &__heading {
-    color: #0f294d;
-    font-size: rem(35px);
-    font-weight: 300;
-    line-height: 1;
+    flex: 0 0 auto;
+    color: white;
+    font-size: rem(24px);
+    font-weight: bold;
+    line-height: 1.15;
+    white-space: nowrap;
+    margin-top: rem(10px);
     margin-bottom: rem(10px);
 
-    @include media-breakpoint-only(lg) {
-      font-size: 30px;
-    }
-  }
-
-  &__subheading {
-    color: $greyed;
-    font-size: rem(20px);
-    font-weight: 300;
-    margin-bottom: 0;
-    line-height: 1;
-
-    @include media-breakpoint-only(lg) {
-      font-size: 18px;
-    }
-
-    @include media-breakpoint-down(md) {
-      display: none;
+    @include media-breakpoint-up(xl) {
+      font-size: rem(30px);
     }
   }
 
   &__price {
-    flex: 0 0 25%;
-    text-align: center;
-    background-clip: text;
-    color: #b3a18f;
-    line-height: 0.85;
-    font-size: rem(80px);
-    font-weight: 300;
-
-    span {
-      color: $greyed;
-      font-size: rem(40px);
-      font-weight: 300;
-      transform: translateY(-15px);
-      display: inline-block;
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-
-    @include media-breakpoint-only(lg) {
-      text-align: left;
-    }
-
-    @include media-breakpoint-down(md) {
-      font-size: rem(60px);
-      margin-bottom: 0;
-
-      span {
-        transform: translateY(-8px);
-      }
-
-    }
-  }
-
-  &__cats {
-    flex: 0 0 20%;
     display: flex;
-    justify-content: center;
-
-    @include media-breakpoint-down(md) {
-      display: none;
-    }
-  }
-
-  &__list {
-    padding: 0;
-    list-style: none;
-    margin: 0;
-
-    @include media-breakpoint-down(md) {
-      text-align: left;
-      margin: rem(25px 0);
-      transform: translateX(20px);
-      margin-bottom: rem(35px);
-    }
-  }
-
-  &__cat {
-    color: $text-color;
-    font-family: "Segoe UI";
-    font-size: rem(13px);
-    line-height: 1;
-    margin-bottom: rem(10px);
-
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      background-color: #e6e6e6;
-      ;
-      margin-right: rem(12px);
-      border-radius: 50%;
-      vertical-align: middle;
-
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  &__imgs {
-    display: flex;
-
-    @include media-breakpoint-down(md) {
-      display: none;
-    }
-  }
-
-  &__img {
-    width: 90px;
-    height: 90px;
-    border: 1px solid #e2e3e3;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin: rem(0 10px);
+    color: $highlight;
+    line-height: 1.15;
+    font-size: rem(70px);
+    margin-left: 24px;
+    margin-right: 24px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-    &:first-of-type {
+    @include media-breakpoint-down(md) {
       margin-left: 0;
-    }
-
-    &:last-of-type {
       margin-right: 0;
     }
+
+    @include media-breakpoint-up(xl) {
+      font-size: rem(90px);
+    }
+
+    span {
+      display: inline-block;
+      padding-left: rem(16px);
+      padding-right: rem(16px);
+      color: $text-light;
+      font-size: rem(20px);
+      font-weight: normal;
+      text-shadow: none;
+    }
   }
+
 }
 
 .subcategory {
   &__title {
+    width: 100%;
     color: $text-color;
+    font-weight: bold;
     font-size: rem(13px);
-    line-height: 1;
+    line-height: 1.15;
     text-align: left;
     margin-bottom: 0;
-    padding: rem(20px 40px);
+    padding: rem(18px 20px);
     z-index: 10;
     position: relative;
-    @include gradient-line;
     background: #fff;
 
     &::before {
@@ -518,9 +480,10 @@
 
     &::after {
       content: '';
-      background: url('../../inc/img/icons/arrow-white.svg');
-      width: 5px;
-      height: 10px;
+      background: url('../../inc/img/icons/chevron-right.svg');
+      background-repeat: no-repeat;
+      width: 11px;
+      height: 17px;
       bottom: 20px;
       right: 20px;
       position: absolute;
@@ -663,7 +626,7 @@
   }
 
   &__subheading {
-    color: $greyed;
+    color: $text-light;
     font-size: rem(20px);
     font-weight: 300;
     margin-bottom: 0;

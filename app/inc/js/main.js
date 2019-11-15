@@ -207,6 +207,8 @@ $('.category__discounts').slick({
   dots: false,
   infinite: false,
   fade: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
 });
 
 

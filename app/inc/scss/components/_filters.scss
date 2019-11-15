@@ -27,7 +27,7 @@
   &__heading {
     color: $text-color;
     font-size: rem(15px);
-    font-weight: 600;
+    font-weight: bold;
 
     &--dropdown {
       color: $text-color;
@@ -38,17 +38,17 @@
       &::before {
         content: url(../img/icons/chevron-down.svg);
         display: inline-block;
-        margin-right: rem(20px);
+        margin-right: rem(10px);
         transition: 250ms;
       }
 
       &:hover {
         color: $text-color;
 
-        &::before {
-          filter: brightness(0);
+        // &::before {
+        //   filter: brightness(0);
 
-        }
+        // }
       }
     }
   }
@@ -82,10 +82,14 @@
       .filters__heading {
         color: #fff;
 
-        &::before {
-          filter: brightness(2);
-        }
+        // &::before {
+        //   filter: brightness(2);
+        // }
       }
+    }
+
+    &--nohover:hover {
+      background-color: white;
     }
 
 
@@ -94,10 +98,10 @@
         color: $text-color;
 
         &::before {
-          filter: brightness(0);
+          // filter: brightness(0);
           transform: rotate(-180deg);
           transition: 250ms;
-          vertical-align: -webkit-baseline-middle;
+          vertical-align: middle;
 
         }
       }
@@ -109,9 +113,9 @@
         .filters__heading {
           color: $text-color;
 
-          &::before {
-            filter: brightness(0);
-          }
+          // &::before {
+          //   filter: brightness(0);
+          // }
         }
       }
 
@@ -134,9 +138,9 @@
   }
 
   &__count {
-    color: #998a7a;
+    color: $highlight;
     font-size: rem(11px);
-    font-weight: 600;
+    font-weight: bold;
   }
 
   &__clear {
@@ -182,19 +186,19 @@
       }
     }
 
-    &--remove {
-      border: 1px solid #0f294d;
-      background-color: #ffffff;
-      color: #0f294d;
-      transition: 250ms;
+    // &--remove {
+    //   border: 1px solid #0f294d;
+    //   background-color: #ffffff;
+    //   color: #0f294d;
+    //   transition: 250ms;
 
-      &:hover {
-        background-color: #0f294d;
-        font-weight: 600;
-        color: #fff;
-        transition: 250ms;
-      }
-    }
+    //   &:hover {
+    //     background-color: #0f294d;
+    //     font-weight: 600;
+    //     color: #fff;
+    //     transition: 250ms;
+    //   }
+    // }
 
     &--reset {
       display: none;
@@ -251,6 +255,11 @@
       margin-right: rem(8px);
       margin-left: rem(8px);
     }
+
+    &--search {
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+    }
   }
 
 
@@ -261,6 +270,10 @@
     font-size: rem(15px);
     margin-bottom: rem(5px);
     justify-content: space-around;
+    
+    span {
+      font-family: $font-secondary;
+    }
   }
 
   &__dropdown {
@@ -282,7 +295,7 @@
     border: none;
     background: transparent;
     padding: 0;
-    color: $greyed;
+    color: $text-light;
     font-size: rem(13px);
     margin-bottom: rem(2.5px);
 
@@ -298,7 +311,7 @@
 
     span {
       color: $text-color;
-      font-weight: 600;
+      font-weight: bold;
     }
 
     @include media-breakpoint-down(md) {
@@ -326,7 +339,7 @@
 }
 
 .irs--flat .irs-bar {
-  background-color: $accent;
+  background-color: $bg-dark;
   height: 3px;
 }
 
@@ -340,18 +353,18 @@
 .irs--flat .irs-handle>i:first-child {
   width: 13px;
   height: 13px;
-  background-color: $accent;
+  background-color: $bg-dark;
   border-radius: 50%;
   left: 0;
 }
 
 .irs--flat .irs-handle.state_hover>i:first-child,
 .irs--flat .irs-handle:hover>i:first-child {
-  background-color: $accent;
+  background-color: $bg-dark;
 }
 
 .os-scrollbar-handle {
-  background-color: $accent !important;
+  background-color: $highlight !important;
   width: 3px !important;
 }
 
