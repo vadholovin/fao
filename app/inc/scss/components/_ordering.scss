@@ -1,133 +1,138 @@
 .ordering {
-    &__form {
-        display: flex;
-        align-items: center;
-        font-size: rem(13px);
-        color: $greyed;
-        @include media-breakpoint-down(md) {
-            flex-direction: column;
-        }
+  &__form {
+    display: flex;
+    align-items: center;
+    font-size: rem(13px);
+    color: $text-light;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__select {
+    @extend .form-input;
+    margin-left: rem(20px);
+    max-width: 270px;
+    background-position: 93% !important;
+
+    @include media-breakpoint-down(md) {
+      margin: 15px 0;
+      max-width: 100%;
+    }
+  }
+
+  &__checkbox {
+    margin-left: auto;
+
+    @include media-breakpoint-down(md) {
+      margin: auto;
+    }
+  }
+
+  &__control {
+    margin: rem(15px 20px);
+
+    @include media-breakpoint-down(md) {
+      margin: rem(15px 0);
+    }
+  }
+
+  &__label {
+    color: $text-color;
+    font-size: rem(13px);
+    line-height: 1.6;
+    padding-left: rem(10px);
+
+
+    &:hover {
+      color: $text-color;
+      transition: 250ms;
+      font-weight: 400;
+
+      &::before {
+        border: 1px solid $grey-700;
+        transition: 250ms;
+      }
     }
 
-    &__select {
-        @extend .form-input;
-        margin-left: rem(20px);
-        max-width: 270px;
-        background-position: 93% !important;
-        
-        @include media-breakpoint-down(md) {
-            margin: 15px 0;
-            max-width: 100%;
-        }
+    @include media-breakpoint-down(md) {
+      &::before {
+        top: 2px !important;
+      }
+
+      &::after {
+        top: 9px !important;
+      }
+
     }
+  }
 
-    &__checkbox {
-        margin-left: auto;
-        
-        @include media-breakpoint-down(md) {
-            margin: auto;
-        }
+
+  &__counter {
+    color: $text-light;
+    font-size: rem(13px);
+  }
+
+  &__count {
+    color: $highlight;
+    font-weight: bold;
+    margin-left: rem(5px);
+  }
+
+  &__ppp {
+    color: $text-light;
+    font-size: rem(13px);
+    text-align: center;
+  }
+
+  &__view {
+    text-align: right;
+
+    @include media-breakpoint-down(md) {
+      display: none;
     }
-    
-    &__control {
-        margin: rem(15px 20px);
-        
-        @include media-breakpoint-down(md) {
-            margin: rem(15px 0);
-        }
-    }
-
-    &__label {
-        color: #262626;;
-        font-size: rem(13px);
-        line-height: 1.6;
-        padding-left: rem(10px);
-
-
-        &:hover {
-            color: #262626;
-            transition: 250ms;
-            font-weight: 400;
-
-            &::before {
-                border: 1px solid #262626;
-                transition: 250ms;
-            }
-        }
-        
-        @include media-breakpoint-down(md) {
-            &::before {
-                    top: 2px !important;
-            }
-            
-            &::after {
-                top: 9px !important;
-            }
-            
-        }
-    }
-
-
-    &__counter {
-        color: $greyed;
-        font-size: rem(13px);
-    }
-
-    &__count {
-        color: #998a7a;
-        font-weight: 600;
-        margin-left: rem(5px);
-    }
-
-    &__ppp {
-        color: $greyed;
-        font-size: rem(13px);
-        text-align: center;
-    }
-    
-    &__view {
-        text-align: right;
-        
-        @include media-breakpoint-down(md) {
-            display: none;
-        }
-    }
+  }
 }
 
 .ppp {
-    &__btn {
-        color: #262626;
-        font-size: rem(13px);
-        line-height: 1;
-        background: transparent;
-        padding: rem(12px 12px);
-        border: none;
-        
-        &--active {
-            color: #998a7a;
-            font-weight: 600;
-            border: 1px solid #b3a18f;
-        }
+  &__btn {
+    color: $text-color;
+    font-weight: bold;
+    font-size: rem(13px);
+    line-height: 1;
+    background: transparent;
+    padding: rem(12px 12px);
+    border: none;
 
+    &--active {
+      color: $grey-300;
+      background-color: $bg-dark;
     }
+
+  }
 }
 
 .view {
-    &__btn {
-        border: none;
-        background: none;
-        padding: 0;
-        margin: rem(0 5px);
-        
-        &:last-of-type {
-            margin-right: 0;
-        }
-        
-        &--active {
-            svg path {
-                fill: #998a7a;
-            }
-        }
+  &__btn {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: rem(0 8px);
+
+    &:last-of-type {
+      margin-right: 0;
     }
-    
+
+    svg path {
+      fill: $text-color;
+    }
+
+    &--active {
+      svg path {
+        fill: $highlight;
+      }
+    }
+  }
+
 }

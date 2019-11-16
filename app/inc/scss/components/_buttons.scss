@@ -110,7 +110,7 @@
   }
 
   &::before {
-    content: url(../img/icons/arrow-down.svg);
+    content: url(../img/icons/chevron-down.svg);
     display: inline-block;
     transform: rotate(90deg);
     margin-right: rem(5px);
@@ -120,7 +120,7 @@
 }
 
 .btn-light {
-  background: #e6e6e6;
+  background: $bg-lighter;
   color: $text-color;
   font-size: rem(15px);
   font-weight: 600;
@@ -130,8 +130,7 @@
 
   &:hover {
     color: #fff;
-    background-color: #b3a18f;
+    background-color: $bg-dark;
     transition: 150ms;
-
   }
 }

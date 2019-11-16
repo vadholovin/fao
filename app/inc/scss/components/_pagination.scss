@@ -1,71 +1,76 @@
 .pagination {
+  display: flex;
+  background: #fff;
+
+  &__link {
+    color: $text-color;
+    font-weight: bold;
+    font-size: rem(13px);
+    line-height: 1.15;
+    padding: rem(17.5px 45px);
     display: flex;
-    background: #fff;
-
-    &__link {
-        color: #262626;
-        font-size: rem(13px);
-        line-height: 1;
-        padding: rem(17.5px 45px);
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        border-right: 1px solid #e6e6e6;
+    justify-content: center;
+    align-content: center;
+    border-right: 1px solid $border-main;
 
 
-        &:hover {
-            text-decoration: underline;
-            color: #262626;
-        }
+    &:hover {
+      text-decoration: underline;
+      color: $text-color;
+    }
 
-        &--start,
-        &--next {
-            flex: 1 1 20%;
+    &:last-child {
+      border-right: none;
+    }
 
-            @include media-breakpoint-only(lg) {
-                padding: rem(17.5px 25px);
-            }
+    &--start,
+    &--next {
+      flex: 1 1 20%;
 
-            @include media-breakpoint-down(md) {
-                font-size: 0;
-                flex: 1 1 10%;
-            }
-            
-        }
+      @include media-breakpoint-only(lg) {
+        padding: rem(17.5px 25px);
+      }
 
-        &--start {
-            @extend .link-prev;
-            border-right: 1px solid #e6e6e6;
-        }
-
-        &--next {
-            @extend .link-next;
-            border-left: 1px solid #e6e6e6;
-        }
-
-        &--active {
-            color: #fff;
-            background-color: $accent;
-            
-            &:hover {
-                color: #fff;
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-            padding: 30px;
-            flex-grow: 1;
-
-            &:nth-of-type(5),
-            &:nth-of-type(6) {
-                display: none;
-            }
-        }
-
-        @include media-breakpoint-down(sm) {
-            padding: 20px 10px;
-        }
-
+      @include media-breakpoint-down(md) {
+        font-size: 0;
+        flex: 1 1 10%;
+      }
 
     }
+
+    &--start {
+      @extend .link-prev;
+      // border-right: 1px solid #e6e6e6;
+    }
+
+    &--next {
+      @extend .link-next;
+      // border-left: 1px solid #e6e6e6;
+    }
+
+    &--active {
+      color: #fff;
+      background-color: $bg-dark;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 30px;
+      flex-grow: 1;
+
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 20px 10px;
+    }
+
+
+  }
 }
