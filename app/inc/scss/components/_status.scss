@@ -1,85 +1,85 @@
 .status {
-    position: relative;
+  position: relative;
 
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+
+  &--processing {
     &::before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        margin-right: 8px;
-        border-radius: 50%;
+      background-color: $highlight;
     }
+  }
 
-    &--processing {
-        &::before {
-            background-color: #0f294d;
-        }
+  &--sended {
+    &::before {
+      background-color: $highlight-light;
     }
+  }
 
-    &--sended {
-        &::before {
-            background-color: #b3a18f;
-        }
+  &--canceled {
+    &::before {
+      background-color: $red;
     }
+  }
 
-    &--canceled {
-        &::before {
-            background-color: #c30000;
-        }
+  &--delivered {
+    &::before {
+      background-color: $green;
     }
+  }
 
-    &--delivered {
-        &::before {
-            background-color: #999900;
-        }
+  &--finished {
+    &::before {
+      background-color: $bg-meddium;
     }
-
-    &--finished {
-        &::before {
-            background-color: $greyed;
-        }
-    }
+  }
 }
 
 .status__right {
-    position: relative;
+  position: relative;
 
+  &::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 8px;
+    border-radius: 50%;
+  }
+
+  &--processing {
     &::after {
-        content: '';
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        margin-left: 8px;
-        border-radius: 50%;
+      background-color: $highlight;
     }
+  }
 
-    &--processing {
-        &::after {
-            background-color: #3689b3;
-        }
+  &--sended {
+    &::after {
+      background-color: $highlight-light;
     }
+  }
 
-    &--sended {
-        &::after {
-            background-color: #e59800;
-        }
+  &--canceled {
+    &::after {
+      background-color: $red;
     }
+  }
 
-    &--canceled {
-        &::after {
-            background-color: #c30000;
-        }
+  &--delivered {
+    &::after {
+      background-color: $green;
     }
+  }
 
-    &--delivered {
-        &::after {
-            background-color: #999900;
-        }
+  &--finished {
+    &::after {
+      background-color: $bg-meddium;
     }
-
-    &--finished {
-        &::after {
-            background-color: $greyed;
-        }
-    }
+  }
 }

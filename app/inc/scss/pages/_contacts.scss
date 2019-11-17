@@ -73,7 +73,7 @@
 
   &__info {
     span {
-      color: $accent;
+      color: $highlight;
     }
   }
 
@@ -163,7 +163,7 @@
     margin-bottom: 4px;
 
     span {
-      color: $accent;
+      color: $highlight;
     }
 
     &:hover {
@@ -190,7 +190,7 @@
 
   &__time {
     font-size: rem(25px);
-    color: $accent;
+    color: $highlight;
     margin-bottom: rem(4px);
   }
 }
@@ -252,7 +252,7 @@
 
   &__heading {
     font-size: rem(30px);
-    color: $accent;
+    color: $highlight;
   }
 
   &__text {

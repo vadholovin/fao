@@ -74,19 +74,19 @@
     }
 
     &__small {
-        color: $greyed;
+        color: $text-light;
         font-size: rem(13px);
         display: block;
     }
 
     &__tel {
-        color: $accent;
+        color: $highlight;
         font-size: rem(25px);
         display: block;
         line-height: 1.15;
 
         &:hover {
-            color: $accent;
+            color: $highlight;
             text-decoration: none;
         }
 
@@ -202,7 +202,7 @@
             transition: 150ms;
             
             path {
-                fill: $accent;
+                fill: $highlight;
             }
         }
     }
@@ -225,7 +225,7 @@
         }
         
         &--greyed {
-            background: $greyed;
+            background: $text-light;
         }
     }
 

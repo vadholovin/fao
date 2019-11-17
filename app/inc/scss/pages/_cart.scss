@@ -35,7 +35,7 @@
     line-height: 1;
 
     &::before {
-      color: $accent;
+      color: $highlight;
       display: inline-block;
       margin-right: rem(25px);
       height: auto;
@@ -167,11 +167,11 @@
     }
 
     &__sku {
-      color: $greyed;
+      color: $text-light;
       font-size: rem(13px);
 
       span {
-        color: $accent;
+        color: $highlight;
         font-weight: 600;
 
         @include media-breakpoint-down(lg) {
@@ -182,7 +182,7 @@
 
     &__availability {
       margin-left: rem(65px);
-      color: $greyed;
+      color: $text-light;
       font-size: rem(13px);
 
       @include media-breakpoint-down(md) {
@@ -199,7 +199,7 @@
       margin-top: 5px;
 
       span {
-        color: $greyed;
+        color: $text-light;
         font-size: rem(20px);
         font-family: 'Source Sans Pro', sans-serif;
       }
@@ -226,14 +226,14 @@
 
     &__total {
       font-size: rem(30px);
-      color: $accent;
+      color: $highlight;
       text-align: right;
       line-height: 1;
       width: 130%;
       margin-top: 5px;
 
       span {
-        color: $greyed;
+        color: $text-light;
         font-size: rem(20px);
       }
 
@@ -276,7 +276,7 @@
         margin-left: rem(10px);
 
         path {
-          fill: $accent;
+          fill: $highlight;
         }
       }
 
@@ -415,7 +415,7 @@
   &__restrictions {
     font-size: rem(13px);
     margin-bottom: 0;
-    color: $greyed;
+    color: $text-light;
 
     @include media-breakpoint-down(md) {
       margin: rem(20px 0);
@@ -574,7 +574,7 @@
     color: #262626;
 
     span {
-      color: $accent;
+      color: $highlight;
     }
 
     @include media-breakpoint-down(md) {
@@ -585,12 +585,12 @@
   &__price {
     margin-left: auto;
     font-size: rem(50px);
-    color: $accent;
+    color: $highlight;
     line-height: 38px;
 
 
     span {
-      color: $greyed;
+      color: $text-light;
       font-size: rem(30px);
       vertical-align: middle;
       transform: translateY(-6px);

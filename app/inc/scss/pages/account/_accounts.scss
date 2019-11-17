@@ -1,58 +1,72 @@
 .accounts {
-    &__heading {
-        @extend .account__subheading;
-        margin-bottom: rem(30px);
+  &__heading {
+    @extend .account__subheading;
+    margin-bottom: rem(30px);
 
+  }
+
+  &__wrapper {
+    padding: rem(30px);
+    display: flex;
+    align-items: center;
+    background-color: white;
+    transition: .25s;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
     }
 
-    &__wrapper {
-        padding: rem(30px);
-        display: flex;
+    &:hover {
+      box-shadow: $shadow;
+    }
+  }
 
-        @include media-breakpoint-down(lg) {
-            flex-direction: column;
-        }
-        
-        &--main {
-            background-color: #0f294d;
-        }
-        
-        &--bonus {
-            background-color: $accent;
-        }
+  &__subheading {
+    display: flex;
+    font-size: rem(20px);
+    font-weight: bold;
+    max-width: 165px;
+    line-height: 1;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: rem(20px);
     }
 
-    &__subheading {
-        color: #ffffff;
-        font-size: rem(30px);
-        font-weight: 300;
-        max-width: 120px;
-        line-height: 1;
-        margin-bottom: 0;
+    svg {
+      margin-right: 28px;
+    }
+  }
 
-        @include media-breakpoint-down(lg) {
-            text-align: center;
-            max-width: 100%;
-            margin-bottom: rem(20px);
-        }
+  &__money {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: rem(60px);
+    font-weight: normal;
+    line-height: 1;
+
+    @include media-breakpoint-down(lg) {
+      margin: auto;
     }
 
-    &__money {
-        margin-left: auto;
-        color: #fff;
-        font-size: rem(60px);
-        font-weight: 300;
-        line-height: 1;
-
-        @include media-breakpoint-down(lg) {
-            margin: auto;
-        }
-
-        span {
-            color: #fff;
-            font-size: rem(30px);
-            font-family: 'Source Sans Pro', sans-serif;
-        }
+    .accounts__wrapper--main & {
+      color: $red;
     }
+
+    .accounts__wrapper--bonus & {
+      color: $green;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 10px;
+      color: $text-light;
+      font-size: rem(30px);
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  }
 
 }

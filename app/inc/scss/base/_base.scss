@@ -96,6 +96,14 @@ h2 {
   }
 }
 
+.shadow-on-hvr {
+  transition: .25s;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+}
+
 .highlight {
   color: $highlight;
   transition: color 250ms;

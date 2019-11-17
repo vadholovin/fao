@@ -1,67 +1,69 @@
 .profile {
-    &__heading {
-        @extend .account__subheading;
-        margin-bottom: rem(30px);
+  &__heading {
+    @extend .account__subheading;
+    margin-bottom: rem(30px);
+  }
+
+  &__wrapper {
+    background-color: white;
+    margin-bottom: rem(30px);
+    padding: rem(30px);
+    position: relative;
+    z-index: 10;
+    transition: .25s;
+
+    &:hover {
+      box-shadow: $shadow;
+    }
+  }
+
+  &__subheading {
+    font-size: rem(20px);
+    font-weight: bold;
+  }
+
+  &__table {
+
+    th,
+    td {
+      padding: rem(10px 0);
+      font-weight: bold;
     }
 
-    &__wrapper {
-        background-color: #fff;
-        margin-bottom: rem(30px);
-        padding: rem(30px);
-        position: relative;
-        z-index: 10;
+    th {
+      width: 270px;
+      color: $text-light;
     }
 
-    &__subheading {
-        color: #262626;
-        font-size: rem(20px);
+    td {
+      color: $text-color;
+
     }
 
-    &__table {
+    tr {
+      &:last-of-type {
 
         th,
         td {
-            padding: rem(10px 0);
-
+          border-bottom: none;
         }
 
-        th {
-            width: 270px;
-            color: #999999;
-            font-size: rem(13px);
-            font-weight: 400;
-        }
-
-        td {
-            color: #262626;
-            font-weight: 600;
-
-        }
-
-        tr {
-            &:last-of-type {
-
-                th,
-                td {
-                    border-bottom: none;
-                }
-
-            }
-        }
+      }
     }
+  }
 
-    &__btn {
-        @extend .btn-main;
-        font-size: rem(13px);
-        padding: rem(12.5px 20px);
+  &__btn {
+    @extend .btn-main;
+    font-size: rem(13px);
+    padding: rem(12.5px 20px);
 
 
-        @include media-breakpoint-down(md) {
-            width: 100%;
-            display: block;
-            text-align: center;
-            margin-top: rem(15px);
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin-top: rem(15px);
 
-        }
     }
+  }
 }

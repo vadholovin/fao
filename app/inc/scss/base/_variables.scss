@@ -21,11 +21,17 @@ $gradient-light: linear-gradient(to top, #bf9e7c, #d9bea3);
 $bg-main: $grey-100 !default;
 $bg-lighter: $grey-300 !default;
 $bg-light: $grey-400 !default;
+$bg-meddium: $grey-500 !default;
 $bg-dark: $grey-700 !default;
 $bg-darker: $grey-900 !default;
+
+$border-dark: $grey-500 !default;
 $border-main: $grey-300 !default;
 $border-gradient: $gradient-dark !default;
+
+$highlight-light: $brown-light !default;
 $highlight: $brown-dark !default;
+
 $text-color: $grey-700 !default;
 $text-light: $grey-500 !default;
 

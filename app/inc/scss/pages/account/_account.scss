@@ -1,48 +1,46 @@
 .account {
 
-    &__wrapper {
-        margin-bottom: rem(70px);
+  &__wrapper {
+    margin-bottom: rem(70px);
+  }
+
+
+  &__heading {
+    line-height: 1;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      margin-bottom: rem(20px);
+    }
+  }
+
+  &__subheading {
+    color: #262626;
+    font-size: rem(30px);
+    line-height: 1;
+    text-align: left;
+
+    &::after,
+    &::before {
+      content: none;
     }
 
-    &__heading {
-        line-height: 1;
-        
-        @include media-breakpoint-down(md) {
-            text-align: center;
-            margin-bottom: rem(20px);
-        }
+    @include media-breakpoint-down(md) {
+      text-align: center;
     }
+  }
 
-    &__subheading {
-        color: #262626;
-        font-size: rem(30px);
-        line-height: 1;
-        text-align: left;
-        
-        &::after, &::before {
-            content: none;
-        }
-        
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
-    }
+  &__content {
+    margin-top: rem(50px);
+  }
 
-    &__link {
-        @extend .link-next;
-        display: block;
-        text-align: right;
-        
-                @include media-breakpoint-down(md) {
-            text-align: center;
-        }
-    }
-
-    &__content {
-        margin-top: rem(50px);
-    }
-    
-    &__accounts, &__profile, &__order, &__tracking, &__order-contents, &__auth, &__return {
-        margin-top: rem(50px);
-    }
+  &__accounts,
+  &__profile,
+  &__order,
+  &__tracking,
+  &__order-contents,
+  &__auth,
+  &__return {
+    margin-top: rem(50px);
+  }
 }

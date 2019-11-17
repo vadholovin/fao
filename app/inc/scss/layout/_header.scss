@@ -904,7 +904,7 @@
 }
 
 .count {
-  color: $greyed;
+  color: $text-light;
   font-size: rem(15px);
 
   &__number {
@@ -912,10 +912,10 @@
   }
 
   &__price {
-    color: $accent;
+    color: $highlight;
 
     span {
-      color: $greyed;
+      color: $text-light;
     }
   }
 

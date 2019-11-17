@@ -117,7 +117,7 @@
     }
 
     &__number {
-        color: $greyed;
+        color: $text-light;
         font-size: rem(15px);
         margin-left: rem(40px);
         line-height: 1;
@@ -125,7 +125,7 @@
         margin-top: 4px;
 
         span {
-            color: $accent;
+            color: $highlight;
             text-transform: uppercase;
             margin-left: rem(12px);
             font-weight: 600;
@@ -276,20 +276,20 @@
 
     &__phones {
         font-size: rem(30px);
-        color: $greyed;
+        color: $text-light;
         line-height: 1;
         margin-bottom: rem(8px);
 
         span {
-            color: $accent;
+            color: $highlight;
         }
 
         &:hover {
-            color: $greyed;
+            color: $text-light;
             text-decoration: none;
 
             span {
-                color: $accent;
+                color: $highlight;
             }
         }
 
@@ -301,7 +301,7 @@
     }
 
     &__worktime {
-        color: $greyed;
+        color: $text-light;
         font-size: rem(13px);
     }
 
@@ -357,7 +357,7 @@
     }
 
     &__answer {
-        color: $greyed;
+        color: $text-light;
         font-size: rem(13px);
         margin-bottom: 0;
         display: none;

@@ -1,119 +1,130 @@
 .last-orders {
-    overflow: auto;
+  overflow: auto;
 
-    &__heading {
-        @extend .account__subheading;
-        text-align: left;
-        margin-bottom: rem(30px);
+  &__heading {
+    @extend .account__subheading;
+    text-align: left;
+    margin-bottom: rem(30px);
 
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  &__table {
+    background: #fff;
+    font-size: rem(13px);
+
+    th,
+    td {
+      padding: 20px;
+      font-weight: bold;
+
+      @include media-breakpoint-down(md) {
+        padding: 20px;
+        min-width: 140px;
+      }
     }
 
-    &__table {
-        background: #fff;
-        font-size: rem(13px);
+    thead {
 
-        th,
+      th {
+        color: $text-light;
+
+        &:last-of-type {
+          text-align: right;
+        }
+      }
+
+      tr {
+        &:hover {
+          background: transparent;
+        }
+      }
+
+    }
+
+    tbody {
+      tr {
+        color: $text-color;
+
         td {
-            padding: 20px;
-            @include media-breakpoint-down(md) {
-                padding: 20px;
-                min-width: 140px;
-            }
+          &:nth-of-type(1) {
+            color: $text-light;
+          }
+
+          &:nth-of-type(2) {
+            font-weight: normal;
+          }
+          
+
+          &:last-of-type {
+            text-align: right;
+          }
         }
-
-        thead {
-
-            th {
-                color: $greyed;
-                font-weight: 400;
-                &:last-of-type {
-                    text-align: right;
-                }
-            }
-
-            tr {
-                &:hover {
-                    background: transparent;
-                }
-            }
-
-        }
-
-        tbody {
-            tr {
-                color: #262626;
-                td {
-                    &:nth-of-type(1) {
-                        color: $greyed;
-                    }
-                    &:last-of-type {
-                        text-align: right;
-                    }
-                }
-
-                &:hover {
-                    background-color: #e6e6e6;;
-                }
-            }
-
-        }
-    }
-
-    &__link {
-        color: #262626;
-        font-size: rem(13px);
 
         &:hover {
-            color: #262626;
-            text-decoration: underline;
+          background-color: $bg-lighter;
+          ;
         }
+      }
+
+    }
+  }
+
+  &__link {
+    color: $text-color;
+    font-size: rem(13px);
+
+    &:hover {
+      color: $text-color;
+      text-decoration: underline;
+    }
+  }
+
+  &__status {
+    color: $text-color;
+
+    @extend .status;
+
+    &::before {
+      position: absolute;
+      top: 1px;
+      bottom: 0;
+      left: -20px;
+      margin: auto;
     }
 
-    &__status {
-        color: #262626;
-
-        @extend .status;
-
-        &::before {
-            position: absolute;
-            top: 1px;
-            bottom: 0;
-            left: -20px;
-            margin: auto;
-        }
-
-        &--processing {
-            @extend .status--processing;
-        }
-
-        &--sended {
-            @extend .status--sended;
-        }
-
-        &--canceled {
-            @extend .status--canceled;
-        }
-
-        &--delivered {
-            @extend .status--delivered;
-        }
-
-        &--finished {
-            @extend .status--finished;
-        }
+    &--processing {
+      @extend .status--processing;
     }
 
-    &__price {
-        color: #0f294d;;
-        font-size: rem(15px);
-        line-height: 0.6;
-
-        span {
-            color: $greyed;
-            font-family: 'Source Sans Pro', sans-serif;
-        }
+    &--sended {
+      @extend .status--sended;
     }
+
+    &--canceled {
+      @extend .status--canceled;
+    }
+
+    &--delivered {
+      @extend .status--delivered;
+    }
+
+    &--finished {
+      @extend .status--finished;
+    }
+  }
+
+  &__price {
+    color: $highlight;
+    font-size: rem(15px);
+    line-height: 0.6;
+
+    span {
+      color: $text-light;
+      font-weight: normal;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  }
 }

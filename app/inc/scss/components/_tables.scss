@@ -1,23 +1,23 @@
 .table {
-    line-height: 1;
-    color: $greyed;
-    font-size: rem(15px);
-    margin-bottom: 0;
+  line-height: 1;
+  color: $text-light;
+  font-size: rem(15px);
+  margin-bottom: 0;
 
-    th,td {
-        padding: 18px 10px;
-        border-top: none;
-        border-bottom: 1px solid #e6e6e6;;
-    
+  th,
+  td {
+    padding: 18px 10px;
+    border-top: none;
+    border-bottom: 1px solid $border-main;
+  }
+
+  thead {
+
+    th {
+      padding-bottom: rem(15px);
+      border-bottom: 1px solid $highlight;
     }
 
-    thead {
-
-        th {
-            padding-bottom: rem(15px);
-            border-bottom: 1px solid $accent;
-        }
-
-    }
+  }
 
 }
