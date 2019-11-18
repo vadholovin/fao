@@ -128,7 +128,7 @@
             color: $highlight;
             text-transform: uppercase;
             margin-left: rem(12px);
-            font-weight: 600;
+            font-weight: bold;
         }
 
         @include media-breakpoint-only(lg) {
@@ -247,7 +247,7 @@
 
         a {
             color: #262626;
-            font-weight: 600;
+            font-weight: bold;
         }
     }
 
@@ -353,7 +353,7 @@
         display: inline-flex;
         line-height: normal;
         margin-bottom: rem(12px);
-        font-weight: 600;
+        font-weight: bold;
     }
 
     &__answer {
@@ -393,7 +393,7 @@
         @extend .btn-main;
         font-size: rem(13px);
         padding: rem(12.5px 20px);
-        font-weight: 600;
+        font-weight: bold;
 
         @include media-breakpoint-down(md) {
             width: 100%;

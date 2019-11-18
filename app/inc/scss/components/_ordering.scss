@@ -56,16 +56,16 @@
       }
     }
 
-    @include media-breakpoint-down(md) {
-      &::before {
-        top: 2px !important;
-      }
+    // @include media-breakpoint-down(md) {
+    //   &::before {
+    //     top: 2px !important;
+    //   }
 
-      &::after {
-        top: 9px !important;
-      }
+    //   &::after {
+    //     top: 9px !important;
+    //   }
 
-    }
+    // }
   }
 
 

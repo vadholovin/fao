@@ -35,7 +35,7 @@
   &__author {
     margin-bottom: rem(15px);
     color: #262626;
-    font-weight: 600;
+    font-weight: bold;
     display: flex;
 
     @include media-breakpoint-down(md) {

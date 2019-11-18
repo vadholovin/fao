@@ -1,0 +1,42 @@
+.contactbox__title {
+  margin-bottom: rem(30px);
+  font-weight: bold;
+  font-size: rem(30px);
+  line-height: 1;
+}
+
+.contactbox__label {
+  margin-bottom: rem(10px);
+  color: $text-light;
+}
+
+.contactbox__phones {
+  padding: 0;
+  list-style: none;
+}
+
+.contactbox__phone {
+  line-height: 1.15;
+}
+
+.contactbox__phone-link {
+  font-weight: bold;
+  font-size: rem(25px);
+  color: $highlight;
+
+  &:hover {
+    text-decoration: none;
+    color: $highlight;
+  }
+}
+
+.contactbox__phone-link span {
+  font-weight: normal;
+  color: $text-light;
+}
+
+
+.contactbox--account {
+  padding: rem(24px 30px 36px 30px);
+  background-color: white;
+}

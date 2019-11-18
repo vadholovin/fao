@@ -104,11 +104,12 @@
 
 .custom-radio .custom-control-label {
   &::before {
-    top: 4px;
+    top: 50%;
+    transform: translate(0, -50%);
 
-    @include media-breakpoint-down(md) {
-      top: 2px;
-    }
+    // @include media-breakpoint-down(md) {
+    //   top: 2px;
+    // }
   }
 
 }
@@ -149,13 +150,15 @@
   height: 6px;
   background: $highlight-light;
   left: -17px;
-  top: 11px;
+  // top: 11px;
+  top: 50%;
+  transform: translate(0, -50%);
   border-radius: 50%;
 
-  @include media-breakpoint-down(md) {
-    // left: -14px;
-    top: 9px;
-  }
+  // @include media-breakpoint-down(md) {
+  //   left: -14px;
+  //   top: 9px;
+  // }
 }
 
 .custom-radio .custom-control-input:checked~.custom-control-label:before {

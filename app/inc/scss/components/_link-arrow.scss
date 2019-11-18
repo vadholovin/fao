@@ -5,22 +5,40 @@
   line-height: 1.15;
   color: $text-color;
 
+  &::before,
   &::after {
-    content: url(../img/icons/chevron-right.svg);
     display: inline-block;
-    margin-left: 8px;
     width: 11px;
     height: 17px;
-    vertical-align: middle;
+    vertical-align: text-top;
     transition: all 250ms;
+  }
+
+  &::after {
+    content: url(../img/icons/chevron-right.svg);
+    margin-left: 8px;
   }
 
   &:hover {
     text-decoration: none;
     color: $text-color;
 
+    &::before,
     &::after {
       filter: brightness(0);
     }
+  }
+}
+
+.link-arrow--opposite {
+
+  &::before {
+    content: url(../img/icons/chevron-right.svg);
+    transform: rotate(0.5turn);
+    margin-right: 8px;
+  }
+
+  &::after {
+    content: none;
   }
 }

@@ -99,7 +99,7 @@
     &__lead {
         font-size: rem(15px);
         margin-bottom: rem(16px);
-        font-weight: 600;
+        font-weight: bold;
 
         @include media-breakpoint-down(md) {
             text-align: center;
@@ -119,7 +119,7 @@
 
         span {
             color: $highlight;
-            font-weight: 600;
+            font-weight: bold;
         }
 
         @include media-breakpoint-down(md) {

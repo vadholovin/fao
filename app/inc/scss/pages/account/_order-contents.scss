@@ -201,7 +201,7 @@
 
       span {
         color: $highlight;
-        font-weight: 600;
+        font-weight: bold;
       }
     }
 
@@ -266,7 +266,7 @@
     &__heading {
       color: $text-color;
       font-size: rem(13px);
-      font-weight: 600;
+      font-weight: bold;
 
       span {
         color: $text-light;
