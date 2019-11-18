@@ -1,7 +1,7 @@
 .account {
 
   &__wrapper {
-    margin-bottom: rem(70px);
+    margin-bottom: rem(40px);
   }
 
 
@@ -42,9 +42,5 @@
   &__auth,
   &__return {
     margin-top: rem(50px);
-  }
-
-  &__sidebar > * + * {
-    margin-top: rem(30px);
   }
 }

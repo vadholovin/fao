@@ -1,4 +1,9 @@
 .account {
+
+  &__sidebar > * + * {
+    margin-top: rem(30px);
+  }
+  
   .nav {
     &__menu {
       padding: 0;
@@ -6,9 +11,9 @@
       list-style: none;
       width: 100%;
 
-      @include media-breakpoint-down(md) {
-        margin-bottom: rem(30px);
-      }
+      // @include media-breakpoint-down(md) {
+      //   margin-bottom: rem(30px);
+      // }
     }
 
     &__item {

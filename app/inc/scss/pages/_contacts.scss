@@ -14,15 +14,15 @@
   }
 
 
-  &__link {
-    @extend .link-next;
-    text-align: right;
-    display: block;
+  // &__link {
+  //   @extend .link-next;
+  //   text-align: right;
+  //   display: block;
 
-    @include media-breakpoint-down(md) {
-      text-align: center;
-    }
-  }
+  //   @include media-breakpoint-down(md) {
+  //     text-align: center;
+  //   }
+  // }
 
   &__company {
     margin: rem(45px 0);
@@ -54,34 +54,42 @@
   }
 
   &__feedback {
-    padding-bottom: rem(60px);
+    padding-bottom: rem(20px);
 
     @include media-breakpoint-down(md) {
-      padding-bottom: rem(30px);
+      padding-bottom: 0;
     }
   }
 }
 
 .company {
   &__wrapper {
-    background-color: #fff;
+    background-color: white;
     margin: 0;
     line-height: 20px;
     min-height: 300px;
-    font-size: rem(13px);
+    font-size: rem(15px);
   }
 
-  &__info {
+  &__info-registry {
+    margin-bottom: rem(12px);
+
     span {
+      font-weight: bold;
       color: $highlight;
     }
+  }
+
+  &__info-address {
+    margin-bottom: rem(20px);
+    color: $text-color;
   }
 
   &__col {
     flex: 0 0 25%;
     padding: rem(30px);
-    color: #808080;
-    border-right: 1px solid #e6e6e6e6;
+    color: $text-light;
+    border-right: 1px solid $border-main;
 
     &:first-of-type {
       flex: 0 0 27%;
@@ -139,8 +147,8 @@
   }
 
   &__heading {
-    color: #262626;
-    ;
+    color: $text-color;
+    font-weight: bold;
     font-size: rem(20px);
     margin-bottom: rem(20px);
   }
@@ -148,26 +156,36 @@
 
 
   &__link {
-    color: #262626;
+    color: $text-color;
     font-weight: bold;
 
     &:hover {
-      color: #262626;
+      color: $text-color;
+    }
+  }
+
+  &__phones {
+    font-size: rem(13px);
+    margin-bottom: rem(30px);
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 
   &__tel {
     font-size: rem(25px);
-    color: #808080;
+    color: $text-light;
     display: block;
     margin-bottom: 4px;
 
     span {
+      font-weight: bold;
       color: $highlight;
     }
 
     &:hover {
-      color: #808080;
+      color: $text-light;
       text-decoration: none;
     }
   }
@@ -180,15 +198,16 @@
 
   &__mail {
     display: block;
-    color: #ffffff;
+    color: white;
     margin-bottom: rem(30px);
 
     &:hover {
-      color: #fff;
+      color: white;
     }
   }
 
   &__time {
+    font-weight: bold;
     font-size: rem(25px);
     color: $highlight;
     margin-bottom: rem(4px);
@@ -198,33 +217,24 @@
 .location {
   &__step {
     border-radius: 0 0 4px 4px;
-    background-color: #fff;
+    background-color: white;
     position: relative;
-    ransition: 200ms;
-
-
-
-    @include gradient-line;
-
-    &::after {
-      width: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
+    transition: 200ms;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
-      box-shadow: 0 0 20px rgba(20, 24, 26, 0.15);
-      ransition: 200ms;
+      box-shadow: $shadow;
+      transition: 200ms;
 
-      &::after {
-        width: 100%;
+      .location__details {
+        background-color: $bg-dark;
         transition: 200ms;
       }
 
       .location__text {
-        color: #262626;
-        ;
+        color: white;
         transition: 200ms;
       }
     }
@@ -242,15 +252,19 @@
     width: 100%;
   }
 
+  &__details {
+    flex-grow: 1;
+    background-color: white;
+  }
+
   &__heading,
   &__text {
     padding: rem(24px);
-    text-align: center;
     margin-bottom: 0;
-    text-align: center;
   }
 
   &__heading {
+    font-weight: bold;
     font-size: rem(30px);
     color: $highlight;
   }
@@ -259,7 +273,7 @@
     font-size: rem(13px);
     padding-top: 0;
     padding-bottom: rem(46px);
-    color: #808080;
+    color: $text-light;
     transition: 200ms;
   }
 }
@@ -268,7 +282,7 @@
   &__form {
     border-radius: 1px;
     padding: rem(30px);
-    background-color: #fff;
+    background-color: white;
   }
 
   &__captcha {
