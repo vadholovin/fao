@@ -1,159 +1,146 @@
 .magazine {
 
-    &__heading {
-        line-height: 1;
-        margin-bottom: 0;
+  &__heading {
+    line-height: 1;
+    margin-bottom: 0;
 
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
+    @include media-breakpoint-down(md) {
+      text-align: center;
     }
+  }
 
-    &__link {
-        @extend .link-next;
-        display: block;
-        text-align: right;
+  &__link {
+    @extend .link-next;
+    display: block;
+    text-align: right;
 
-        @include media-breakpoint-down(md) {
-            margin-top: rem(20px);
-            text-align: center;
-        }
+    @include media-breakpoint-down(md) {
+      margin-top: rem(20px);
+      text-align: center;
     }
+  }
 
-    &__articles {
-        margin-bottom: rem(45px);
+  &__articles {
+    margin-bottom: rem(45px);
+  }
+
+  &__filters {
+    margin-top: rem(40px);
+    margin-bottom: rem(15px);
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
     }
+  }
 
-    &__filters {
-        margin-top: rem(40px);
-        margin-bottom: rem(15px);
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    height: 270px;
+    position: relative;
+    background-repeat: no-repeat;
+    margin: rem(15px 0);
+    background-size: cover;
 
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
-    }
+    &--big,
+    &--huge {
+      height: 570px;
 
-    &__item {
-        display: flex;
-        align-items: flex-end;
+      @include media-breakpoint-down(md) {
         height: 270px;
-        position: relative;
-        background-repeat: no-repeat;
-        margin: rem(15px 0);
-        background-size: cover;
-
-        @include gradient-line;
-    
-        &::after {
-            width: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: 100;
-        }
-
-        &--big, &--huge {
-            height: 570px;
-
-            @include media-breakpoint-down(md) {
-                height: 270px;
-            }
-        }
-
-        &:hover {
-            text-decoration: none;
-
-            &::before {
-                opacity: 0;
-                transition: 200ms;
-            }
-
-            &::after {
-                width: 100%;
-                transition: 200ms;
-            }
-
-            .item__title {
-                transition: 200ms;
-            }
-        }
+      }
     }
 
-    .item {
-        &__tags {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 10;
-        }
+    &:hover {
+      text-decoration: none;
 
-        &__tag {
-            display: inline-block;
-            color: #ffffff;
-            padding: rem(10px 16px);
-            font-size: rem(13px);
-            border: none;
-            margin-right: rem(6px);
-        }
-
-        &__title {
-            color: #262626;
-            font-size: rem(20px);
-            text-align: center;
-            z-index: 10;
-            background-color: #fff;
-            margin-bottom: 0;
-            width: 100%;
-            transition: 200ms;
-            max-width: 370px;
-            margin: auto;
-            margin-bottom: 0;
-            
-             &::before, &::after {
-            content: none;
-        }
-            
-            &--huge {
-                padding: rem(50px 80px);
-                font-size: rem(30px);
-                max-width: 770px;
-                line-height: 1;
-                
-                @include media-breakpoint-down(md) {
-                    font-size: rem(20px);
-                    max-width: 100%;
-                }
-            }
-
-
-            &--big {
-                padding: rem(30px);
-                line-height: 1;
-
-                @include media-breakpoint-down(md) {
-                    font-size: rem(20px);
-                    max-width: 100%;
-                }
-            }
-
-            &--medium {
-                padding: rem(22px 40px);
-                line-height: 1;
-
-                @include media-breakpoint-down(md) {
-                    font-size: rem(20px);
-                    max-width: 100%;
-                }
-            }
-
-            &--small {
-                font-size: rem(15px);
-                padding: rem(20px 25px);
-                line-height: 1;
-                max-width: 100%;
-
-
-            }
-        }
+      .item__title {
+        color: $highlight;
+        background-color: $bg-dark;
+        transition: 200ms;
+      }
     }
+  }
+
+  .item {
+    &__tags {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+
+    &__tag {
+      display: inline-block;
+      color: #ffffff;
+      padding: rem(10px 16px);
+      border: none;
+      font-weight: bold;
+      text-shadow: 0.5px 0 1px rgba(#000, 0.5);
+      margin-right: rem(6px);
+    }
+
+    &__title {
+      color: $text-color;
+      font-size: rem(20px);
+      line-height: 1;
+      text-align: left;
+      z-index: 10;
+      background-color: #fff;
+      width: 100%;
+      padding-left: rem(30px);
+      padding-right: rem(30px);
+      transition: 200ms;
+      margin-bottom: 0;
+
+      &--huge {
+        padding: rem(35px 40px);
+        font-size: rem(35px);
+
+        @include media-breakpoint-down(md) {
+          font-size: rem(20px);
+          padding: rem(25px 30px);
+        }
+      }
+
+
+      &--big {
+        padding-top: rem(28px);
+        padding-bottom: rem(28px);
+        font-size: rem(25px);
+
+        @include media-breakpoint-down(md) {
+          font-size: rem(20px);
+          padding-top: rem(25px);
+          padding-bottom: rem(25px);
+        }
+      }
+
+      &--medium {
+        padding-top: rem(30px);
+        padding-bottom: rem(30px);
+
+        @include media-breakpoint-down(md) {
+          font-size: rem(20px);
+          padding-top: rem(25px);
+          padding-bottom: rem(25px);
+        }
+      }
+
+      &--small {
+        padding-top: rem(25px);
+        padding-bottom: rem(25px);
+        font-size: rem(17px);
+        
+        @include media-breakpoint-down(md) {
+          font-size: rem(20px);
+        }
+      }
+
+      span {
+        display: block;
+        max-width: 740px;
+      }
+    }
+  }
 }
