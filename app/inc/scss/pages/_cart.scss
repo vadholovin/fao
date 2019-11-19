@@ -103,6 +103,7 @@
   .item {
 
     &__img {
+      display: inline-block;
       max-width: 170px;
       max-height: 170px;
       border: 1px solid $border-main;

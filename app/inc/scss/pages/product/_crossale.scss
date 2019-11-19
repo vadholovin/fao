@@ -11,8 +11,8 @@
 
     &--expanded {
       .crossale__subheading {
-        background-color: $bg-dark;
-        color: #fff;
+        // background-color: $bg-dark;
+        // color: #fff;
 
         &::before {
           transform: rotate(-180deg);
@@ -131,6 +131,7 @@
   }
 
   &__img {
+    display: block;
     width: 67px;
     height: 67px;
     flex: 0 0 5.83%;
