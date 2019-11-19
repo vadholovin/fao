@@ -11784,8 +11784,8 @@ select {
 }
 
 .review__author {
-  margin-bottom: 0.9375rem;
-  color: #262626;
+  margin-bottom: 1.0625rem;
+  color: #33302e;
   font-weight: bold;
   display: -webkit-box;
   display: flex;
@@ -11807,6 +11807,14 @@ select {
   .review__content {
     padding: 1.5625rem;
   }
+}
+
+.reviews-page__review .review__content {
+  padding-top: 1.5rem;
+}
+
+.review__content.is-expanded {
+  padding-bottom: 0.75rem;
 }
 
 .review__expand {
@@ -11847,14 +11855,20 @@ select {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  padding: 1.875rem 1.5625rem;
+  -webkit-box-align: end;
+          align-items: flex-end;
+  text-align: right;
+  padding: 1.5rem 1.5625rem 1.875rem 1.5625rem;
   height: 100%;
-  border-left: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e3e1;
 }
 
 @media (max-width: 991.98px) {
   .review__meta {
     border: none;
+    -webkit-box-align: center;
+            align-items: center;
+    text-align: center;
   }
 }
 
@@ -11878,6 +11892,12 @@ select {
   padding-right: 10px;
 }
 
+.reviews-page__review .review__date {
+  padding: 0;
+  font-size: 0.9375rem;
+  color: #33302e;
+}
+
 .review__date time {
   color: #bf9e7c;
   margin-top: 0.25rem;
@@ -11897,9 +11917,8 @@ select {
 
 .review__rating span {
   color: #999691;
-  font-weight: bold;
   display: block;
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
 }
 
 .review__stars {
@@ -11918,10 +11937,13 @@ select {
   }
 }
 
+.review__stars > * + * {
+  margin-left: 5px;
+}
+
 .review__star {
-  width: 19px;
-  height: 19px;
-  margin-right: 1px;
+  width: 15px;
+  height: 15px;
 }
 
 .review__footer {
@@ -11979,6 +12001,18 @@ select {
           transform: translateY(3px);
 }
 
+.reviews-page__review:hover .review__meta {
+  background-color: #33302e;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.reviews-page__review:hover .review__date {
+  color: #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 .pagination {
   display: -webkit-box;
   display: flex;
@@ -12002,6 +12036,11 @@ select {
 .pagination__link:hover {
   text-decoration: underline;
   color: #33302e;
+}
+
+.pagination__link:hover::before, .pagination__link:hover::after {
+  -webkit-filter: none;
+          filter: none;
 }
 
 .pagination__link:last-child {

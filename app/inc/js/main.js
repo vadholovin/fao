@@ -375,6 +375,7 @@ $('.specifications__table--hidden').click(function () {
 $('.review__expand').click(function () {
   var container = $(this).parents().eq(1);
   $(this).toggleClass('review__expand--expanded');
+  container.toggleClass('is-expanded');
   container.find('.review__text').toggleClass('review__text--opacity');
   container.find('.review__text--hidden').slideToggle();
 })
