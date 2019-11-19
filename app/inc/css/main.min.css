@@ -10146,8 +10146,8 @@ input:focus,
 }
 
 .currency {
-  font-family: "Source Sans Pro", BlinkMacSystemFont, -apple-system, Arial, "Segoe UI", Roboto, Helvetica, sans-serif;
-  font-weight: normal;
+  font-family: "Source Sans Pro", BlinkMacSystemFont, -apple-system, Arial, "Segoe UI", Roboto, Helvetica, sans-serif !important;
+  font-weight: normal !important;
 }
 
 .currency--light {
@@ -10241,23 +10241,23 @@ input:focus,
 }
 
 .link-next, .search__all, .review__expand, .pagination__link--next, .header .categories__link--parent, .support__return, .support__ticket, .frontpage .slide__link, .banners__link, .novelty__link,
-.best__link, .promocode__link, .article__link, .article__next, .magazine__link, .bonus__link, .product-page__link, .specifications__expand, .collection__link, .reviews-page__link, .help__link, .help__return, .help__ticket, .help__callback, .account .nav__link, .tracking__link, .order-contents__link, .category__link, .sidebar__expand, .brand__link {
+.best__link, .promocode__link, .article__link, .article__next, .magazine__link, .product-page__link, .specifications__expand, .collection__link, .reviews-page__link, .help__link, .help__return, .help__ticket, .help__callback, .account .nav__link, .tracking__link, .order-contents__link, .category__link, .sidebar__expand, .brand__link {
   color: #33302e;
   font-size: 0.8125rem;
 }
 
 .link-next:hover, .search__all:hover, .review__expand:hover, .pagination__link--next:hover, .header .categories__link--parent:hover, .support__return:hover, .support__ticket:hover, .frontpage .slide__link:hover, .banners__link:hover, .novelty__link:hover,
-.best__link:hover, .promocode__link:hover, .article__link:hover, .article__next:hover, .magazine__link:hover, .bonus__link:hover, .product-page__link:hover, .specifications__expand:hover, .collection__link:hover, .reviews-page__link:hover, .help__link:hover, .help__return:hover, .help__ticket:hover, .help__callback:hover, .account .nav__link:hover, .tracking__link:hover, .order-contents__link:hover, .category__link:hover, .sidebar__expand:hover, .brand__link:hover {
+.best__link:hover, .promocode__link:hover, .article__link:hover, .article__next:hover, .magazine__link:hover, .product-page__link:hover, .specifications__expand:hover, .collection__link:hover, .reviews-page__link:hover, .help__link:hover, .help__return:hover, .help__ticket:hover, .help__callback:hover, .account .nav__link:hover, .tracking__link:hover, .order-contents__link:hover, .category__link:hover, .sidebar__expand:hover, .brand__link:hover {
   color: #33302e;
 }
 
 .link-next::before, .search__all::before, .review__expand::before, .pagination__link--next::before, .header .categories__link--parent::before, .support__return::before, .support__ticket::before, .frontpage .slide__link::before, .banners__link::before, .novelty__link::before,
-.best__link::before, .promocode__link::before, .article__link::before, .article__next::before, .magazine__link::before, .bonus__link::before, .product-page__link::before, .specifications__expand::before, .collection__link::before, .reviews-page__link::before, .help__link::before, .help__return::before, .help__ticket::before, .help__callback::before, .account .nav__link::before, .tracking__link::before, .order-contents__link::before, .category__link::before, .sidebar__expand::before, .brand__link::before {
+.best__link::before, .promocode__link::before, .article__link::before, .article__next::before, .magazine__link::before, .product-page__link::before, .specifications__expand::before, .collection__link::before, .reviews-page__link::before, .help__link::before, .help__return::before, .help__ticket::before, .help__callback::before, .account .nav__link::before, .tracking__link::before, .order-contents__link::before, .category__link::before, .sidebar__expand::before, .brand__link::before {
   content: none;
 }
 
 .link-next::after, .search__all::after, .review__expand::after, .pagination__link--next::after, .header .categories__link--parent::after, .support__return::after, .support__ticket::after, .frontpage .slide__link::after, .banners__link::after, .novelty__link::after,
-.best__link::after, .promocode__link::after, .article__link::after, .article__next::after, .magazine__link::after, .bonus__link::after, .product-page__link::after, .specifications__expand::after, .collection__link::after, .reviews-page__link::after, .help__link::after, .help__return::after, .help__ticket::after, .help__callback::after, .account .nav__link::after, .tracking__link::after, .order-contents__link::after, .category__link::after, .sidebar__expand::after, .brand__link::after {
+.best__link::after, .promocode__link::after, .article__link::after, .article__next::after, .magazine__link::after, .product-page__link::after, .specifications__expand::after, .collection__link::after, .reviews-page__link::after, .help__link::after, .help__return::after, .help__ticket::after, .help__callback::after, .account .nav__link::after, .tracking__link::after, .order-contents__link::after, .category__link::after, .sidebar__expand::after, .brand__link::after {
   content: url(../img/icons/chevron-down.svg);
   display: inline-block;
   margin-left: 0.3125rem;
@@ -16187,18 +16187,8 @@ select {
 
 @media (max-width: 991.98px) {
   .bonus__wrapper {
-    margin-top: 3.75rem;
-  }
-}
-
-.bonus__link {
-  display: block;
-  text-align: right;
-}
-
-@media (max-width: 991.98px) {
-  .bonus__link {
-    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 3.75rem;
   }
 }
 
@@ -16231,7 +16221,7 @@ select {
 }
 
 .task [class*=col-]:last-of-type {
-  background-color: #e6e6e6;
+  background-color: #e6e3e1;
 }
 
 @media (max-width: 991.98px) {
@@ -16241,8 +16231,20 @@ select {
   }
 }
 
+.task:hover [class*=col-]:last-of-type {
+  background-color: #33302e;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.task:hover .task__finished {
+  color: #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 .task__heading {
-  color: #262626;
+  color: #33302e;
   font-size: 1.875rem;
   text-align: left;
   line-height: 1;
@@ -16260,18 +16262,10 @@ select {
 }
 
 .task__price {
-  color: #998a7a;
-}
-
-.task__price span {
-  color: #999691;
-  font-size: 1.5625rem;
-  font-family: 'Source Sans Pro', sans-serif;
+  color: #bf9e7c;
 }
 
 .task__perform {
-  font-size: 0.8125rem;
-  padding: 0.78125rem 1.125rem;
   margin-top: auto;
 }
 
@@ -16288,15 +16282,16 @@ select {
 }
 
 .task__info {
-  color: #262626;
+  color: #33302e;
   font-size: 0.8125rem;
   margin-bottom: 1.25rem;
   line-height: 1.3;
 }
 
 .task__info:last-of-type {
+  margin-top: 1rem;
   margin-bottom: 0;
-  color: #999999;
+  color: #999691;
 }
 
 .task__info span {
@@ -16311,11 +16306,11 @@ select {
 }
 
 .task__finished {
-  font-weight: 300;
+  font-weight: bold;
   font-size: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5625rem;
   line-height: 1.1;
-  color: #262626;
+  color: #33302e;
 }
 
 @media (max-width: 991.98px) {
@@ -16325,8 +16320,6 @@ select {
 }
 
 .task__submit {
-  font-size: 0.8125rem;
-  padding: 0.78125rem 1.125rem;
   margin-bottom: auto;
 }
 
@@ -16334,6 +16327,10 @@ select {
   .task__submit {
     margin-bottom: 1.25rem;
   }
+}
+
+.task__submit:hover {
+  color: #fff;
 }
 
 .wishlist__wrapper {
@@ -18404,6 +18401,13 @@ select {
   margin-bottom: 1.25rem;
 }
 
+@media (max-width: 991.98px) {
+  .thankyou__wrapper {
+    margin-top: 2.5rem;
+    margin-bottom: 3.75rem;
+  }
+}
+
 .thankyou__header {
   display: -webkit-box;
   display: flex;
@@ -18457,7 +18461,7 @@ select {
 }
 
 .thankyou__header:nth-of-type(2) .link-arrow {
-  color: #fff;
+  color: white;
 }
 
 .thankyou__choose {
@@ -18553,7 +18557,7 @@ select {
 
 .thankyou__summ span b {
   font-family: "Trebuchet MS", BlinkMacSystemFont, -apple-system, Arial, "Segoe UI", Roboto, Helvetica, sans-serif;
-  color: #fff;
+  color: white;
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {

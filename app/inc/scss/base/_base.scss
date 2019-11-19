@@ -136,8 +136,8 @@ input,
 }
 
 .currency {
-  font-family: $font-secondary;
-  font-weight: normal;
+  font-family: $font-secondary !important;
+  font-weight: normal !important;
 }
 
 .currency--light {

@@ -1,152 +1,149 @@
 .bonus {
-    &__heading {
-        text-align: left;
-        line-height: 1;
-        margin-bottom: 0;
+  &__heading {
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 0;
 
-        @include media-breakpoint-down(md) {
-            text-align: center;
-            margin-bottom: rem(20px);
-        }
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      margin-bottom: rem(20px);
     }
+  }
 
-    &__wrapper {
-        @include media-breakpoint-down(md) {
-            margin-top: rem(60px);
-        }
+  &__wrapper {
+    @include media-breakpoint-down(md) {
+      margin-top: rem(40px);
+      margin-bottom: rem(60px);
     }
+  }
 
-    &__link {
-        @extend .link-next;
-        display: block;
-        text-align: right;
+  &__tasks {
+    margin-top: rem(50px);
+    margin-bottom: rem(30px);
 
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
+
+    @include media-breakpoint-down(md) {
+      margin-top: rem(30px);
     }
+  }
 
-    &__tasks {
-        margin-top: rem(50px);
-        margin-bottom: rem(30px);
-
-
-        @include media-breakpoint-down(md) {
-            margin-top: rem(30px);
-        }
-    }
-
-    &__task {
-        background-color: #fff;
-        margin-bottom: rem(30px);
-    }
+  &__task {
+    background-color: #fff;
+    margin-bottom: rem(30px);
+  }
 }
 
 .task {
 
-    [class*=col-] {
-        padding: rem(22px);
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+  [class*=col-] {
+    padding: rem(22px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-        &:last-of-type {
-            background-color: #e6e6e6;
-            ;
-        }
-
-        @include media-breakpoint-down(md) {
-            align-items: center;
-        }
+    &:last-of-type {
+      background-color: $bg-lighter;
     }
 
-    &__heading {
-        color: #262626;
-        font-size: rem(30px);
-        text-align: left;
-        line-height: 1;
+    @include media-breakpoint-down(md) {
+      align-items: center;
+    }
+  }
 
-        &::before,
-        &::after {
-            content: none;
-        }
+  &:hover {
 
-        @include media-breakpoint-down(md) {
-            text-align: center;
-            margin-bottom: rem(20px);
-        }
+    [class*=col-]:last-of-type {
+      background-color: $bg-dark;
+      transition: .2s;
     }
 
-    &__price {
-        color: #998a7a;
-        ;
+    .task__finished {
+      color: #fff;
+      transition: .2s;
+    }
+  }
 
-        span {
-            color: $text-light;
-            font-size: rem(25px);
-            font-family: 'Source Sans Pro', sans-serif;
-        }
+  &__heading {
+    color: $text-color;
+    font-size: rem(30px);
+    text-align: left;
+    line-height: 1;
+
+    &::before,
+    &::after {
+      content: none;
     }
 
-    &__perform {
-        @extend .btn-main;
-        font-size: rem(13px);
-        padding: rem(12.5px 18px);
-        margin-top: auto;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      margin-bottom: rem(20px);
+    }
+  }
+
+  &__price {
+    color: $highlight;
+  }
+
+  &__perform {
+    @extend .btn-main;
+    margin-top: auto;
+  }
+
+  &__lead {
+    font-size: rem(15px);
+    margin-bottom: rem(16px);
+    font-weight: bold;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  &__info {
+    color: $text-color;
+    font-size: rem(13px);
+    margin-bottom: rem(20px);
+    line-height: 1.3;
+
+    &:last-of-type {
+      margin-top: rem(16px);
+      margin-bottom: 0;
+      color: $text-light;
     }
 
-    &__lead {
-        font-size: rem(15px);
-        margin-bottom: rem(16px);
-        font-weight: bold;
-
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
+    span {
+      color: $highlight;
+      font-weight: bold;
     }
 
-    &__info {
-        color: #262626;
-        font-size: rem(13px);
-        margin-bottom: rem(20px);
-        line-height: 1.3;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
 
-        &:last-of-type {
-            margin-bottom: 0;
-            color: #999999;
-        }
+  &__finished {
+    font-weight: bold;
+    font-size: rem(20px);
+    margin-bottom: rem(25px);
+    line-height: 1.1;
+    color: $text-color;
 
-        span {
-            color: $highlight;
-            font-weight: bold;
-        }
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
 
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
+  &__submit {
+    @extend .btn-main;
+    margin-bottom: auto;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem(20px);
     }
 
-    &__finished {
-        font-weight: 300;
-        font-size: rem(20px);
-        margin-bottom: rem(20px);
-        line-height: 1.1;
-        color: #262626;
-
-        @include media-breakpoint-down(md) {
-            text-align: center;
-        }
+    &:hover {
+      color: #fff;
     }
-
-    &__submit {
-        @extend .btn-main;
-        font-size: rem(13px);
-        padding: rem(12.5px 18px);
-        margin-bottom: auto;
-
-        @include media-breakpoint-down(md) {
-            margin-bottom: rem(20px);
-        }
-    }
+  }
 }
