@@ -70,6 +70,7 @@
 .link-next {
   color: $text-color;
   font-size: rem(13px);
+  white-space: nowrap;
 
   &:hover {
     color: $text-color;
@@ -96,6 +97,7 @@
 .link-prev {
   color: $text-color;
   font-size: rem(13px);
+  white-space: nowrap;
 
   &:hover {
     color: $text-color;
