@@ -79,7 +79,7 @@ h2 {
 .bg-pattern {
   position: relative;
   z-index: 0;
-  background-color: $bg-dark;
+  background-color: $bg-dark !important;
 
   &::after {
     content: '';
@@ -89,7 +89,7 @@ h2 {
     width: 100%;
     height: 100%;
     opacity: 0.07;
-    background-image: url(../img/bg/pattern-1.png);
+    background-image: url(../img/bg/pattern-1.png) !important;
     background-repeat: repeat;
     background-position: 0 0;
     z-index: -1;
@@ -133,4 +133,17 @@ input,
 
 .quantity {
   color: $text-light;
+}
+
+.currency {
+  font-family: $font-secondary;
+  font-weight: normal;
+}
+
+.currency--light {
+  color: $text-light !important;
+}
+
+.currency--white {
+  color: white !important;
 }

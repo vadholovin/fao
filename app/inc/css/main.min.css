@@ -10093,7 +10093,7 @@ h2 {
 .bg-pattern {
   position: relative;
   z-index: 0;
-  background-color: #33302e;
+  background-color: #33302e !important;
 }
 
 .bg-pattern::after {
@@ -10104,7 +10104,7 @@ h2 {
   width: 100%;
   height: 100%;
   opacity: 0.07;
-  background-image: url(../img/bg/pattern-1.png);
+  background-image: url(../img/bg/pattern-1.png) !important;
   background-repeat: repeat;
   background-position: 0 0;
   z-index: -1;
@@ -10143,6 +10143,19 @@ input:focus,
 
 .quantity {
   color: #999691;
+}
+
+.currency {
+  font-family: "Source Sans Pro", BlinkMacSystemFont, -apple-system, Arial, "Segoe UI", Roboto, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.currency--light {
+  color: #999691 !important;
+}
+
+.currency--white {
+  color: white !important;
 }
 
 .btn-main, .product--table .product__buy, .filters__clear, .filters__btn, .support__btn, .feedback__submit, .cart__checkout, .promocode__submit, .task__perform, .task__submit, .product-page__buy, .product-page__oneclick, .crossale__buy, .comments__add, .reviews__add, .gallery__add, .pick__select, .compare__addtocart, .compare__remove, .opinion__submit, .dreambox__addtocart, .dreambox__similar, .profile__btn, .order__btn, .auth__submit, .return__submit, .category__btn--filters, .sold__btn {
@@ -10228,23 +10241,23 @@ input:focus,
 }
 
 .link-next, .search__all, .review__expand, .pagination__link--next, .header .categories__link--parent, .support__return, .support__ticket, .frontpage .slide__link, .banners__link, .novelty__link,
-.best__link, .promocode__link, .article__link, .article__next, .magazine__link, .bonus__link, .product-page__link, .specifications__expand, .collection__link, .reviews-page__link, .thankyou__link, .help__link, .help__return, .help__ticket, .help__callback, .account .nav__link, .tracking__link, .order-contents__link, .category__link, .sidebar__expand, .brand__link {
+.best__link, .promocode__link, .article__link, .article__next, .magazine__link, .bonus__link, .product-page__link, .specifications__expand, .collection__link, .reviews-page__link, .help__link, .help__return, .help__ticket, .help__callback, .account .nav__link, .tracking__link, .order-contents__link, .category__link, .sidebar__expand, .brand__link {
   color: #33302e;
   font-size: 0.8125rem;
 }
 
 .link-next:hover, .search__all:hover, .review__expand:hover, .pagination__link--next:hover, .header .categories__link--parent:hover, .support__return:hover, .support__ticket:hover, .frontpage .slide__link:hover, .banners__link:hover, .novelty__link:hover,
-.best__link:hover, .promocode__link:hover, .article__link:hover, .article__next:hover, .magazine__link:hover, .bonus__link:hover, .product-page__link:hover, .specifications__expand:hover, .collection__link:hover, .reviews-page__link:hover, .thankyou__link:hover, .help__link:hover, .help__return:hover, .help__ticket:hover, .help__callback:hover, .account .nav__link:hover, .tracking__link:hover, .order-contents__link:hover, .category__link:hover, .sidebar__expand:hover, .brand__link:hover {
+.best__link:hover, .promocode__link:hover, .article__link:hover, .article__next:hover, .magazine__link:hover, .bonus__link:hover, .product-page__link:hover, .specifications__expand:hover, .collection__link:hover, .reviews-page__link:hover, .help__link:hover, .help__return:hover, .help__ticket:hover, .help__callback:hover, .account .nav__link:hover, .tracking__link:hover, .order-contents__link:hover, .category__link:hover, .sidebar__expand:hover, .brand__link:hover {
   color: #33302e;
 }
 
 .link-next::before, .search__all::before, .review__expand::before, .pagination__link--next::before, .header .categories__link--parent::before, .support__return::before, .support__ticket::before, .frontpage .slide__link::before, .banners__link::before, .novelty__link::before,
-.best__link::before, .promocode__link::before, .article__link::before, .article__next::before, .magazine__link::before, .bonus__link::before, .product-page__link::before, .specifications__expand::before, .collection__link::before, .reviews-page__link::before, .thankyou__link::before, .help__link::before, .help__return::before, .help__ticket::before, .help__callback::before, .account .nav__link::before, .tracking__link::before, .order-contents__link::before, .category__link::before, .sidebar__expand::before, .brand__link::before {
+.best__link::before, .promocode__link::before, .article__link::before, .article__next::before, .magazine__link::before, .bonus__link::before, .product-page__link::before, .specifications__expand::before, .collection__link::before, .reviews-page__link::before, .help__link::before, .help__return::before, .help__ticket::before, .help__callback::before, .account .nav__link::before, .tracking__link::before, .order-contents__link::before, .category__link::before, .sidebar__expand::before, .brand__link::before {
   content: none;
 }
 
 .link-next::after, .search__all::after, .review__expand::after, .pagination__link--next::after, .header .categories__link--parent::after, .support__return::after, .support__ticket::after, .frontpage .slide__link::after, .banners__link::after, .novelty__link::after,
-.best__link::after, .promocode__link::after, .article__link::after, .article__next::after, .magazine__link::after, .bonus__link::after, .product-page__link::after, .specifications__expand::after, .collection__link::after, .reviews-page__link::after, .thankyou__link::after, .help__link::after, .help__return::after, .help__ticket::after, .help__callback::after, .account .nav__link::after, .tracking__link::after, .order-contents__link::after, .category__link::after, .sidebar__expand::after, .brand__link::after {
+.best__link::after, .promocode__link::after, .article__link::after, .article__next::after, .magazine__link::after, .bonus__link::after, .product-page__link::after, .specifications__expand::after, .collection__link::after, .reviews-page__link::after, .help__link::after, .help__return::after, .help__ticket::after, .help__callback::after, .account .nav__link::after, .tracking__link::after, .order-contents__link::after, .category__link::after, .sidebar__expand::after, .brand__link::after {
   content: url(../img/icons/chevron-down.svg);
   display: inline-block;
   margin-left: 0.3125rem;
@@ -12374,6 +12387,7 @@ select {
   font-weight: bold;
   line-height: 1.15;
   color: #33302e;
+  white-space: nowrap;
 }
 
 .link-arrow::before, .link-arrow::after {
@@ -12391,13 +12405,8 @@ select {
 }
 
 .link-arrow:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: #33302e;
-}
-
-.link-arrow:hover::before, .link-arrow:hover::after {
-  -webkit-filter: brightness(0);
-          filter: brightness(0);
 }
 
 .link-arrow--opposite::before {
@@ -18391,21 +18400,8 @@ select {
   }
 }
 
-.thankyou__link {
-  display: block;
-  text-align: right;
-  margin-left: auto;
-}
-
-@media (max-width: 991.98px) {
-  .thankyou__link {
-    margin-top: 1.25rem;
-    text-align: center;
-  }
-}
-
 .thankyou__wrapper {
-  margin-bottom: 3.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .thankyou__header {
@@ -18415,32 +18411,9 @@ select {
           align-items: center;
   padding: 2.5rem;
   padding-right: 1.875rem;
-  background-color: #ffffff;
+  background-color: white;
   margin-top: 2.1875rem;
   position: relative;
-  -webkit-transition: 250ms;
-  transition: 250ms;
-}
-
-.thankyou__header::after {
-  content: '';
-  width: 100%;
-  height: 3px;
-  background-color: #b3a18f;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-}
-
-.thankyou__header::after {
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  left: unset;
-  top: 0;
-  width: 3px;
-  height: 0;
   -webkit-transition: 250ms;
   transition: 250ms;
 }
@@ -18448,17 +18421,7 @@ select {
 .thankyou__header:hover {
   -webkit-transition: 250ms;
   transition: 250ms;
-  box-shadow: 0 0 20px rgba(20, 24, 26, 0.15);
-}
-
-.thankyou__header:hover::after {
-  height: 100%;
-  -webkit-transition: 250ms;
-  transition: 250ms;
-}
-
-.thankyou__header a {
-  margin-top: 4px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 991.98px) {
@@ -18468,59 +18431,55 @@ select {
             flex-direction: column;
     text-align: center;
   }
-  .thankyou__header a {
-    margin: auto;
-    margin-top: 10px;
+}
+
+.thankyou__header .link-arrow {
+  margin-left: 3rem;
+  margin-top: 4px;
+}
+
+@media (max-width: 1199.98px) {
+  .thankyou__header .link-arrow {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .thankyou__header .link-arrow {
+    margin-left: 0;
+    margin-top: 1.25rem;
+    text-align: center;
   }
 }
 
 .thankyou__header:nth-of-type(2) {
-  background-color: #0f294d;
-  box-shadow: none;
   margin-bottom: 1.875rem;
-  -webkit-transition: 250ms;
-  transition: 250ms;
 }
 
-.thankyou__header:nth-of-type(2):hover {
-  -webkit-transition: 250ms;
-  transition: 250ms;
-  box-shadow: 0 0 20px rgba(20, 24, 26, 0.15);
-}
-
-.thankyou__header:nth-of-type(2) .thankyou__link {
+.thankyou__header:nth-of-type(2) .link-arrow {
   color: #fff;
 }
 
-.thankyou__header:nth-of-type(2) .thankyou__link:hover::after {
-  -webkit-filter: brightness(2);
-          filter: brightness(2);
-}
-
-.thankyou__header:nth-of-type(2)::after {
-  content: none;
-}
-
 .thankyou__choose {
-  color: #262626;
+  color: #33302e;
+  font-weight: bold;
   font-size: 1.875rem;
   margin-left: 1.875rem;
+  margin-right: 1.875rem;
   line-height: 30px;
   margin-bottom: 0;
 }
 
 @media (max-width: 991.98px) {
   .thankyou__choose {
-    margin-left: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
   }
 }
 
 .thankyou__number {
   color: #999691;
   font-size: 0.9375rem;
-  margin-left: 2.5rem;
+  margin-left: auto;
   line-height: 1;
   display: -webkit-box;
   display: flex;
@@ -18560,7 +18519,8 @@ select {
 }
 
 .thankyou__bonus {
-  color: #ffffff;
+  color: white;
+  font-weight: bold;
   font-size: 1.875rem;
   margin-left: 1.875rem;
   line-height: 30px;
@@ -18576,9 +18536,9 @@ select {
 }
 
 .thankyou__summ {
-  color: rgba(255, 255, 255, 0.5);
+  color: #999691;
   font-size: 0.9375rem;
-  margin-left: 3.125rem;
+  margin-left: auto;
   line-height: 1;
   display: -webkit-box;
   display: flex;
@@ -18586,9 +18546,14 @@ select {
 }
 
 .thankyou__summ span {
-  color: #fff;
   text-transform: uppercase;
   margin-left: 0.75rem;
+  font-family: "Source Sans Pro", BlinkMacSystemFont, -apple-system, Arial, "Segoe UI", Roboto, Helvetica, sans-serif;
+}
+
+.thankyou__summ span b {
+  font-family: "Trebuchet MS", BlinkMacSystemFont, -apple-system, Arial, "Segoe UI", Roboto, Helvetica, sans-serif;
+  color: #fff;
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -18619,8 +18584,9 @@ select {
 .thankyou__subheading {
   margin-bottom: 1.5625rem;
   line-height: 1;
-  color: #262626;
+  color: #33302e;
   font-size: 1.875rem;
+  font-weight: bold;
 }
 
 @media (max-width: 767.98px) {
@@ -18632,14 +18598,14 @@ select {
 .thankyou__next, .thankyou__faq, .thankyou__help, .thankyou__opinion {
   padding: 1.5625rem 1.875rem;
   padding-bottom: 2.1875rem;
-  background: #ffffff;
+  background: white;
   position: relative;
   -webkit-transition: 200ms;
   transition: 200ms;
 }
 
 .thankyou__next:hover, .thankyou__faq:hover, .thankyou__help:hover, .thankyou__opinion:hover {
-  box-shadow: 0 0 20px rgba(20, 24, 26, 0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   -webkit-transition: 200ms;
   transition: 200ms;
 }
@@ -18648,17 +18614,16 @@ select {
   position: absolute;
   display: block;
   top: 20px;
-  right: 20px;
+  right: 30px;
 }
 
 .thankyou__text {
-  color: #262626;
-  font-size: 0.8125rem;
+  color: #33302e;
   margin-bottom: 0;
 }
 
 .thankyou__text a {
-  color: #262626;
+  color: #33302e;
   font-weight: bold;
 }
 
@@ -18667,12 +18632,12 @@ select {
 }
 
 .thankyou__col {
-  width: 51%;
+  width: 49%;
   display: inline-block;
+  vertical-align: top;
 }
 
 .thankyou__col:last-of-type {
-  width: 48%;
   text-align: right;
 }
 
@@ -18687,14 +18652,17 @@ select {
 }
 
 .thankyou__phones {
+  display: inline-block;
   font-size: 1.875rem;
   color: #999691;
   line-height: 1;
-  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  margin-bottom: 0.75rem;
 }
 
 .thankyou__phones span {
   color: #bf9e7c;
+  font-weight: bold;
 }
 
 .thankyou__phones:hover {
@@ -18736,7 +18704,7 @@ select {
 }
 
 .faq__item::before {
-  content: url(../img/icons/arrow-down.svg);
+  content: url(../img/icons/chevron-down.svg);
   margin-right: 0.625rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -18752,29 +18720,25 @@ select {
 }
 
 .faq__item:hover .faq__question {
+  font-weight: bold;
   text-decoration: underline;
 }
 
-.faq__item:hover::before {
-  -webkit-filter: brightness(0);
-          filter: brightness(0);
-}
-
 .faq__question {
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   display: -webkit-inline-box;
   display: inline-flex;
-  line-height: normal;
+  line-height: 1.3;
   margin-bottom: 0.75rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .faq__answer {
   color: #999691;
-  font-size: 0.8125rem;
   margin-bottom: 0;
   display: none;
   margin-bottom: 0.75rem;
+  line-height: 1.3;
 }
 
 .opinion__form {
@@ -18785,6 +18749,11 @@ select {
 
 .opinion__group {
   margin-bottom: 1.5625rem;
+}
+
+.opinion__select {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .opinion__textarea {
