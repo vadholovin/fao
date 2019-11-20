@@ -291,6 +291,13 @@
     }
   }
 
+  &__group {
+    
+    .modal & {
+      margin-bottom: rem(20px);
+    }
+  }
+
   &__label {
     @extend .form-label;
     font-size: rem(15px);

@@ -2,23 +2,18 @@ html {
   font-size: 100%;
 }
 
-html,
-body {
-  overflow-x: hidden;
-  min-height: 100vh
-}
-
 body {
   font-family: $font-main;
   font-size: rem(15px);
   font-weight: normal;
   color: $text-color;
   background-color: $bg-main;
+  overflow-x: hidden;
 }
 
-.modal-open {
-  padding-right: 0 !important;
-}
+// .modal-open {
+//   padding-right: 0 !important;
+// }
 
 h1 {
   font-weight: bold;
@@ -27,24 +22,35 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: rem(30px);
+  font-size: rem(24px);
   text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem(30px);
+  }
 }
 
 .title {
   font-weight: bold;
-  font-size: rem(30px);
+  font-size: rem(24px);
   text-align: center;
   text-transform: uppercase;
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem(30px);
+  }
 }
 
 .title--bigger {
-  font-size: rem(40px);
+  font-size: rem(30px);
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem(40px);
+  }
 }
 
 .overlay {
-  opacity: 0.5;
-  background-color: #000000;
+  background-color: rgba($bg-lighter, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -138,9 +144,6 @@ input,
 .currency {
   font-family: $font-secondary !important;
   font-weight: normal !important;
-}
-
-.currency--light {
   color: $text-light !important;
 }
 
