@@ -10065,7 +10065,6 @@ h2 {
 }
 
 .overlay {
-  background-color: rgba(230, 227, 225, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -10340,6 +10339,7 @@ input:focus,
   font-size: 30px;
   margin-bottom: 50px;
   line-height: 1;
+  font-weight: bold;
 }
 
 .modal .modal-content {
