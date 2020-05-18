@@ -146,6 +146,9 @@
 
   &__about {
     
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem(60px);
+    }
   }
 
 }

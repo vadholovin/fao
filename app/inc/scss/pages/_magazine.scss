@@ -21,7 +21,15 @@
   }
 
   &__articles {
-    margin-bottom: rem(45px);
+    margin-bottom: rem(35px);
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+
+    > [class^=col] > .magazine__item {
+      margin-bottom: 0;
+    }
   }
 
   &__filters {

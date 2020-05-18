@@ -305,11 +305,17 @@
 
   }
 
+  &__form {
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem(60px);
+    }
+  }
+
   &__shipping,
   &__payment,
   &__summary,
-  &__personal,
-  &__footer {
+  &__personal {
     margin-bottom: rem(40px);
   }
 

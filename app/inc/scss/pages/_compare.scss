@@ -1,9 +1,8 @@
 .compare {
   &__wrapper {
-    padding-bottom: rem(60px);
 
     @include media-breakpoint-down(md) {
-      padding-bottom: rem(20px)
+      padding-bottom: rem(60px);
     }
 
   }

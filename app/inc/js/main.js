@@ -43,12 +43,14 @@ $(document).ready(function () {
     ],
   });
 
-  $('[data-target="#basket-modal"]').click(function (e) {
-    
+  $('.js-add-to-cart').click(function (e) {
+
+    $('#basket-modal').modal();
+
     setTimeout(function () {
       $('.js-basket-carousel').slick('setPosition');
     }, 200);
-    
+
   });
 
   $('.js-basket-carousel').on('wheel', (function (e) {

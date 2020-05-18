@@ -1,7 +1,10 @@
 .help {
 
   &__wrapper {
-    margin-bottom: rem(10px);
+    
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem(60px);
+    }
   }
 
   &__heading {
@@ -258,7 +261,6 @@
 
   &__item {
     display: flex;
-    align-items: center;
     margin-bottom: rem(6px);
 
     &:last-of-type {
@@ -267,11 +269,19 @@
 
 
     &::before {
-      content: url(../img/icons/chevron-right.svg);
+      content: '';
+      position: relative;
+      top: 0.18em;
+      display: block;
+      flex-shrink: 0;
+      width: 10px;
+      height: 15px;
       // transform: rotate(-90deg);
-      vertical-align: middle;
       margin-right: rem(10px);
       transition: 150ms;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.625' height='15' viewBox='0 0 9.625 15'%3E%3Cpath d='M588.6 1677.81l6.1 6.21a.423.423 0 0 1 .12.3.46.46 0 0 1-.12.3l-6.1 6.2' fill='none' stroke='%23bf9e7c' stroke-width='2' fill-rule='evenodd' transform='translate(-586.188 -1676.81)'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
   }

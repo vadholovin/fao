@@ -329,6 +329,11 @@
       text-align: center;
       padding: rem(50px 30px);
     }
+
+    .category__info & {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   &__article-inner {
@@ -585,6 +590,11 @@
     font-size: rem(13px);
     color: $text-light;
     padding-bottom: rem(23px);
+
+    &--accent {
+      color: #262626;
+      background-color: #e7e4e2;
+    }
 
     .link-arrow {
       margin-top: rem(15px);

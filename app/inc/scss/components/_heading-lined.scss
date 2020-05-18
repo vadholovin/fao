@@ -1,0 +1,30 @@
+.heading-lined {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-lined__text {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50vw;
+    height: 1px;
+    background-color: #e6e6e6;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
+  }
+}

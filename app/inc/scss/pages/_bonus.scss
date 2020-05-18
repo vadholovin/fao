@@ -19,7 +19,7 @@
 
   &__tasks {
     margin-top: rem(50px);
-    margin-bottom: rem(30px);
+    // margin-bottom: rem(30px);
 
 
     @include media-breakpoint-down(md) {
@@ -30,6 +30,10 @@
   &__task {
     background-color: #fff;
     margin-bottom: rem(30px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
